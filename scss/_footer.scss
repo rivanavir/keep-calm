@@ -1,0 +1,112 @@
+/* start: FOOTER */
+footer{
+	border-top: 1px solid $black-bg;
+	font-family: 'latoregular';
+	background:$black-light-bg;
+	padding: 20px 0;
+	clear: both;
+	@media only screen and (max-width: 800px) {
+		margin-top: -50px;
+		padding: 0;
+		position: relative;
+	}
+	.wrapper{
+		ul{
+			float: left;
+			li{
+				display: inline-block;
+				font-size: .71rem;
+				color: $very-light-grey;
+				padding: 0 10px;
+				border-right:1px solid $very-light-grey;
+				&:first-child{
+					padding-left: 0;
+				}
+				&:last-child{
+					border-right: 0;
+					color: #fff;
+				}
+			}
+		}
+		img{
+			float: right;
+		}
+		@media only screen and (max-width: 800px) {display: none;}
+	}
+	.mobile{
+		overflow: hidden;
+		li{
+			border-right:1px solid $black-bg;
+			display: block;
+			float: left;
+			width: 25%;
+			text-align: center;
+			@include box-sizing (border-box);
+			@include box-shadow(inset 0 1px 0 1px rgba(255,255,255,.3)); 
+			&:last-child{
+				border-right:0;
+			}
+			a{
+				display: block;
+				padding: 9px 0 9px;
+				font-family: 'latobold';
+				font-size: .64rem;
+				color: $white-text;
+				position: relative;
+				line-height: 1.4;
+				text-shadow: 0 1px 0 $black-bg;
+				background:url('../img/mobile_foot_bg.jpg') top center repeat-x;
+				&:hover{
+					text-decoration: none;
+				}
+				&.discover{
+					i{
+						background-position: -125px 2px;
+					}
+				}
+				&.not{
+					i{
+						background-position: -62px -30px;
+						position: relative;
+						span{
+							background: $red-bg;
+							border-radius: 50%;
+							@include box-shadow (0 0 0 2px #3d3d3d);
+							color: $white-text;
+							display: block;
+							font-size: .79rem;
+							height: 14px;
+							line-height: 1.2;
+							position: absolute;
+							right: -5px;
+							text-align: center;
+							top: 0;
+							width: 14px;
+						}
+					}
+				}
+				&.basket{
+					i{
+						background-position: -93px -30px;
+					}
+				}
+				&.profile{
+					i{
+						background-position: -125px -30px;
+					}
+				}
+				i{
+					margin: 0 auto;
+					display: block;
+					width: 20px;
+					height: 20px;
+					background-image: url(../img/icon-sprite1.png);
+					background-repeat: no-repeat;
+				}
+			}
+		}
+
+		@media only screen and (min-width: 800px) {display: none;}
+	}
+}
+/* end: FOOTER */
