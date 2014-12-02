@@ -1,3 +1,6 @@
+html{
+	@media only screen and (max-width: 800px) {font-size: 12px;}
+}
 .wrapper{
 	width: 980px;
 	margin: 0 auto;
@@ -49,7 +52,8 @@
 	}
 	p{
 		display: none;
-		font-family: 'latobold';
+		font-family: $font-stack2;
+		font-weight: bold;
 		font-size: .71rem;
 		color: $white-text;
 		background:$grey-bg;
@@ -90,12 +94,63 @@
 		height: 100%;
 	}
 }
-
 /* start: HEADER */
 header{
 	background:$white-bg;
 	@media only screen and (max-width: 800px) {
 		background:$red-bg;
+	}
+	.head-top{
+		background:$light-blue-bg url('../img/poster/head-top-bg.png') 65% bottom no-repeat;
+		position: relative;
+		.close{
+			background:$black-bg;
+			border-radius: 2px;
+			width: 13px;
+			height: 13px;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			opacity: .4;
+			display: block;
+			&:hover{
+				cursor: pointer;
+			}
+			&:before,
+			&:after{
+				position: absolute;
+				content: '';
+				width: 7px;
+				height: 1px;
+				background:$grey-bg;
+				top: 6px;
+				left: 3px;
+				box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+				-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+			}
+			&:before{
+					 -moz-transform: rotate(45deg);
+						 -o-transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+								transform: rotate(45deg);
+			}
+			&:after{
+					 -moz-transform: rotate(-45deg);
+						 -o-transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+								transform: rotate(-45deg);
+			}
+		}
+		p{
+			font-size: 12px;
+			color: $white-text;
+			font-family: $font-stack1;
+			line-height: 3;
+			text-align: left;
+			margin: 0 auto;
+			display: block;
+			width: 1200px;
+		}
 	}
 	.wrapper{
 		position: relative;
@@ -295,7 +350,8 @@ header{
 					float: left;
 					width: 75%;
 					color: $white-text;
-					font-family: 'latobold';
+					font-family: $font-stack2;
+					font-weight: bold;
 					font-size: 1.2rem;
 					display: block;
 					line-height: 24px;
@@ -315,7 +371,8 @@ header{
 			display: block;
 			padding: 15px 17px;
 			background:url('../img/mobile_foot_bg.jpg') center top no-repeat;
-			font-family: 'latobold';
+			font-family: $font-stack2;
+			font-weight: bold;
 			font-size: .83rem;
 			color: $white-text;
 			text-transform: uppercase;
@@ -326,70 +383,5 @@ header{
 			}
 		}
 	}
-	.head-ban{
-		background: url('../img/head-img.jpg') center 0px repeat-x;
-		padding: 55px 0 54px;
-		clear: both;
-		position: relative;
-		@media only screen and (max-width: 800px) {
-			padding: 25px 0 21px;
-			background: url('../img/mobile_ban_bg.jpg') center 0px repeat-x;
-		}
-		&:before,
-		&:after{
-			position: absolute;
-			content: "";
-			width: 15%;
-			height: 100%;
-			top: 0;
-			@media only screen and (max-width: 800px) {
-				background: transparent !important;
-			}
-		}
-		&:before{
-			left: 0;
-			background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-			background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
-		}
-		&:after{
-			right: 0;
-			background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
-			background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
-		}
-		p{
-			font-family: 'rokkittregular';
-			font-size: 2.86rem;
-			color:$white-text;
-			text-align: center;
-			@media only screen and (max-width: 800px) {
-				font-size: 2.14rem;
-			}
-			.mob-arrow{
-				display: none;
-				float: left;
-				background:url('../img/mobile-arrow.png') center top no-repeat;
-				width: 17px;
-				height: 18px;
-				position: relative;
-				z-index: 10;
-				top: 4px;
-				left: 13px;
-				@media only screen and (min-width: 800px) {display: none !important;}
-			}
-		}
-	}
-}
-.topic-clicked{
-	.mob-arrow{display: block !important;}
 }
 /* end: HEADER */

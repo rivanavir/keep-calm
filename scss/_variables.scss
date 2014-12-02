@@ -6,22 +6,40 @@ $white-bg: #ffffff;
 $grey-bg: #7b7b7b;
 $red-bg: #cf2200;
 $light-red: #c92100;
+$lightness-red: #d33e23;
 $light-grey: #bfbfbf;
+$white-grey: #999999;
 $very-light-grey: #a9a9a9;
+$white-light-grey: #d9d9d9;
 $lightest-grey: #f7f7f7;
+$light-blue-text: #00a3db;
+$light-blue-bg:#00a3db;
+$close-color:#868686;
+$top-close:#0082af;
+$textarea-color:#c5c5c5;
 
-$grey-white-bg: #f3f3f3;
+$grey-white-bg: #f4f4f4;
 
 $grey-white-hover: #f0f0f0;
 
+$grey-text: #333333;
 $dark-grey-text: #353535;
+$darkness-grey-text: #464646;
 
 $black-light-text: #666666;
 
 $black-text: #000000;
 $black-bg: #000000;
 
+$poster-product-shadow:#c3c3c3;
+$poster-content-shadow:#ffb836;
+
 $black-light-bg: #252525;
+
+$black-grey-border:#ababab;
+
+$input-bg: #f6f6f6;
+$input-text: #acacac;
 
 $layer1-bg: #56737e;
 $layer2-bg: #e2574c;
@@ -30,8 +48,62 @@ $layer3-bg: #3cae9a;
 $spec-text: #6d6d6d;
 $spec-text2: #939393;
 
+$green-button:#77a300;
+$green-border:#577a00;
+
+$grey-btn-grad1:#dcdcdc;
+$grey-btn-grad2:#ededed;
+$grey-btn-grad-hover1:rgba(220,220,220,.6);
+$grey-btn-grad-hover2:rgba(237,237,237,.6);
+
+$grey-border:#b7b7b7;
+
+$black-grey-btn-bg:#cccbcc;
+
+$red-btn-grad1:#bf1f00;
+$red-btn-grad-hover1:#d52300;
+$red-btn-grad-hover2:#e42500;
+
+$red-shadow:#7f1500;
+
+$red-border:#bf1f00;
+
+$yellow-btn-grad2:#e9a044;
+$yellow-btn-grad1:#ffe96c;
+$yellow-btn-grad-hover2:#e9b46e;
+$yellow-btn-grad-hover1:#f8e78a;
+$yellow-btn-border:#edc257;
+
+$yellow-btn-txt:#6a4b1e;
+
+$yellow-txt-shadow:rgba(254,245,172,.59);
+
+$keep-wrap-grad:#f5f5f5;
+
+$poster-action1:rgba(125,82,0,.66);
+$poster-action2:#7c1400;
+
+$follow-btn:#77a300;
+$follow-btn-hover:#82b200;
+
+$notif-list-bg1:#fbf4f3;
+$notif-list-bg2:#f9f9f9;
+
 $mob-poster-divider: #e1e1e1;
 $tab-menu-list-border: #d8d8d8;
+$gradient-gray:#e5e5e5;
 $quest-border: #e6e6e6;
 $dotted-border: #5b5b5b;
 $accord-border: #e7e7e7;
+
+$footer-bg:#f8f8f8;
+
+/** Fonts **/
+
+$font-stack1: GothamRoundedMedium;
+
+$font-stack2: Lato;
+
+$font-stack3: KeepCalmMedium;
+
+$font-stack5: Rokkitt;

@@ -12,8 +12,8 @@ html, body {
 	height: 100%;
 	width: 100%;
 }
-html { font-family: 'latoregular', sans-serif; font-size: 14px; color: #000; }
-body { font-family: 'latoregular', sans-serif;}
+html { font-family: $font-stack2, sans-serif; font-size: 14px; color: #000; }
+body { font-family: $font-stack2, sans-serif;}
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {
 	display: block;
 }

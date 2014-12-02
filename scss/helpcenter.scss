@@ -17,6 +17,71 @@ body{
 .layer3{display: none !important;}
 
 /* start: main content section */
+.head-ban{
+	background: url('../img/head-img.jpg') center 0px repeat-x;
+	padding: 55px 0 54px;
+	clear: both;
+	position: relative;
+	@media only screen and (max-width: 800px) {
+		padding: 25px 0 21px;
+		background: url('../img/mobile_ban_bg.jpg') center 0px repeat-x;
+	}
+	&:before,
+	&:after{
+		position: absolute;
+		content: "";
+		width: 15%;
+		height: 100%;
+		top: 0;
+		@media only screen and (max-width: 800px) {
+			background: transparent !important;
+		}
+	}
+	&:before{
+		left: 0;
+		background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+		background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+	}
+	&:after{
+		right: 0;
+		background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+		background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+	}
+	p{
+		font-family: $font-stack5;
+		font-size: 2.86rem;
+		color:$white-text;
+		text-align: center;
+		@media only screen and (max-width: 800px) {
+			font-size: 2.14rem;
+		}
+		.mob-arrow{
+			display: none;
+			float: left;
+			background:url('../img/mobile-arrow.png') center top no-repeat;
+			width: 17px;
+			height: 18px;
+			position: relative;
+			z-index: 10;
+			top: 4px;
+			left: 13px;
+			@media only screen and (min-width: 800px) {display: none !important;}
+		}
+	}
+}
+.topic-clicked{
+	.mob-arrow{display: block !important;}
+}
 /** start: sidebar **/
 .sidebar{
 	padding-top: 50px;
@@ -47,14 +112,14 @@ body{
 			font-size: .86rem;
 			color: $white-text;
 			&.title{
-				font-family: 'rokkittregular';
+				font-family: $font-stack5;
 				font-weight: bold;
 				color: $white-text;
 				font-size: 1.43rem;
 				margin-bottom: 5px;
 			}
 		}
-		ul{
+		.popular-link{
 			padding: 15px 20px 0 15px;
 			li{
 				position: relative;
@@ -103,6 +168,8 @@ body{
 .topics{display: block;}
 .topics-open{display: none;}
 .content{
+	position: relative;
+	background:$lightest-grey;
 	padding-top: 50px;
 	padding-bottom: 49px;
 	float: right;
@@ -115,7 +182,7 @@ body{
 		padding-right: 1%;
 	}
 	h2{
-		font-family: 'rokkittregular';
+		font-family: $font-stack5;
 		font-size: 2.14rem;
 		color: $dark-grey-text;
 		margin-bottom: 20px;
@@ -126,7 +193,7 @@ body{
 		}
 	}
 	p{
-		font-family: 'latoregular';
+		font-family: $font-stack2;
 		font-size: 1.07rem;
 		line-height: 1.5;
 		color: $black-text;
@@ -155,7 +222,7 @@ body{
 			@include box-sizing (border-box);
 			display: inline-block;
 			width: 49%;
-			margin: 0 1.5% 13px 0;
+			margin: 0 1.2% 13px 0;
 			padding: 25px;
 			text-align: center;
 			border:1px solid $grey-white-bg;
@@ -207,13 +274,14 @@ body{
 				@media only screen and (max-width: 800px) {float: left;margin-right: 15px;}
 			}
 			p{
-				font-family: 'latoregular';
+				font-family: $font-stack2;
 				font-size: .86rem;
 				color: $black-text;
 				margin-bottom: 0;
 				@media only screen and (max-width: 800px) {display: none;}
 				&.title{
-					font-family: 'latobold';
+					font-family: $font-stack2;
+					font-weight: bold;
 					font-size: 1.07rem;
 					color: $light-red;
 					line-height: 2.5;
@@ -302,7 +370,8 @@ body{
 					padding-top: 60px;
 					padding-bottom: 10px;
 					display: block;
-					font-family: 'latobold';
+					font-family: $font-stack2;
+					font-weight: bold;
 					font-size: .71rem;
 					color: $light-red;
 					line-height: 2.5;
@@ -348,194 +417,226 @@ body{
 	.tabs{
 		
 		.tab-content{
-			// div{
-				.section{
-					font-family: 'rokkittregular';
-					font-weight: bold;
-					font-size: 1.43rem;
-					text-transform: none;
-					color: $light-red;
-					border-top:1px solid $accord-border;
-					position: relative;
-					display: block;
-					line-height: 60px !important;
-					padding: 0;
-					&:after{
+			.section{
+				font-family: $font-stack5;
+				font-weight: bold;
+				font-size: 1.43rem;
+				text-transform: none;
+				color: $light-red;
+				border-top:1px solid $accord-border;
+				position: relative;
+				display: block;
+				padding: 23px 20px 23px 0;
+				z-index: 500;
+				background:$lightest-grey;
+				&:after{
+					position: absolute;
+					content: "";
+					width: 8px;
+					height: 7px;
+					border:1px solid $black-bg;
+					border-bottom-color: transparent;
+					border-left-color: transparent;
+						 -moz-transform: rotate(45deg);
+							 -o-transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+									transform: rotate(45deg);
+						 -moz-transition: transform .5s;
+							 -o-transition: transform .5s;
+					-webkit-transition: transform .5s;
+									transition: transform .5s;
+					right: 20px;
+					top: 50%;
+					margin-top: -5px;
+				}
+				.keep-calm-ban{
+					z-index: -1;
+					visibility:hidden;
+					opacity:0;
+					-webkit-transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+					-moz-transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+					-o-transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+					transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+				}
+				&.current{
+					.keep-calm-ban{
+						opacity: 1;
+						visibility: visible;
+						-webkit-transition-delay:0.7s;
+						-moz-transition-delay:0.7s;
+						-o-transition-delay:0.7s;
+						transition-delay:0.7s;
 						position: absolute;
-						content: "";
-						width: 8px;
-						height: 7px;
-						border:1px solid $black-bg;
-						border-bottom-color: transparent;
-						border-left-color: transparent;
-							 -moz-transform: rotate(45deg);
-								 -o-transform: rotate(45deg);
-						-webkit-transform: rotate(45deg);
-										transform: rotate(45deg);
+						background-size: cover !important;
+						// z-index: 100;
 						right: 20px;
-						top: 50%;
-						margin-top: -5px;
+						top: 86px;
+						width: 124px;
+						height: 145px;
+						@include box-shadow(10px 10px 6px rgba(0,0,0,.1));
+						@media only screen and (max-width: 600px) {display: none;}
+						&.ban-image04{background: url(../img/media/image04.png) top center no-repeat;}
+						&.ban-image09{background: url(../img/media/image09.png) top center no-repeat;}
+						&.ban-image12{background: url(../img/media/image12.png) top center no-repeat;}
+						&.ban-image13{background: url(../img/media/image13.png) top center no-repeat;}
+						&.ban-image14{background: url(../img/media/image14.png) top center no-repeat;}
+						&.ban-image15{background: url(../img/media/image15.png) top center no-repeat;}
+						&.ban-image16{background: url(../img/media/image16.png) top center no-repeat;}
+						&.ban-image17{background: url(../img/media/image17.png) top center no-repeat;}
+						&.ban-image18{background: url(../img/media/image18.png) top center no-repeat;}
+						&.ban-image19{background: url(../img/media/image19.png) top center no-repeat;}
+						&.ban-image21{background: url(../img/media/image21.png) top center no-repeat;}
+						&.ban-image23{background: url(../img/media/image23.png) top center no-repeat;}
+						&.ban-image25{background: url(../img/media/image25.png) top center no-repeat;}
+						&.ban-image27{background: url(../img/media/image27.png) top center no-repeat;}
+						&.ban-image28{background: url(../img/media/image28.png) top center no-repeat;}
 					}
-					&.current{
-						&:after{
-								 -moz-transform: rotate(135deg);
-									 -o-transform: rotate(135deg);
-							-webkit-transform: rotate(135deg);
-											transform: rotate(135deg);
-						}
-					}
-					&:hover{
-						background:$grey-white-hover;
-						cursor: pointer;
+					&:after{
+							 -moz-transform: rotate(135deg);
+								 -o-transform: rotate(135deg);
+						-webkit-transform: rotate(135deg);
+										transform: rotate(135deg);
 					}
 				}
-				div{
-					position: relative;
-					p{
-						font-family: 'latoregular';
-						font-size: 1.07rem;
-						color: $black-text;
-						text-align: left;
-						margin: 5px 0;
-						&.title{
-							font-family: 'latobold';
-							line-height: 2;
-							margin: 10px 0;
-						}
-						a{
+				&:hover{
+					background:$grey-white-hover;
+					cursor: pointer;
+				}
+				a{color:$light-blue-text}
+			}
+			div{
+				position: relative;
+				p{
+					font-family: $font-stack2;
+					font-size: 1.07rem;
+					color: $black-text;
+					text-align: left;
+					margin: 5px 0;
+					&.title{
+						font-family: $font-stack2;
+						font-weight: bold;
+						line-height: 2;
+						margin: 10px 0;
+					}
+					a{
+						color: $light-red;
+						&:hover{
 							color: $light-red;
+							text-decoration: none;
+						}
+					}
+				}
+				h3{
+					font-family: $font-stack5;
+					font-size: 1.29rem;
+					color: $light-red;
+					position: relative;
+				}
+				.your-quest{
+					padding: 20px;
+					background:$white-bg;
+					@include box-shadow(0 3px 8px rgba(0,0,0,.15));
+					border-radius: 2px;
+					columns: 2;
+					margin-bottom: 40px;
+					@media only screen and (max-width: 600px) {
+						columns:1;
+					}
+					li{
+						a{
+							background: url("../img/arrow-small.png") no-repeat left 6px;
+							font-family: $font-stack2;
+							font-size: .93rem;
+							color: $light-red;
+							padding-left: 12px;
+							line-height: 2.5;
 							&:hover{
-								color: $light-red;
+								color: $black-text;
 								text-decoration: none;
 							}
 						}
 					}
-					h3{
-						font-family: 'rokkittregular';
-						font-size: 1.29rem;
-						color: $light-red;
-						text-transform: uppercase;
-						line-height: 60px;
-						// padding: 22px 0;
-						position: relative;
+				}
+				.pane{
+					padding-right: 30%;
+					padding-bottom: 65px;
+					display: block;
+					position: relative;
+					@media only screen and (max-width: 800px) {padding-bottom: 100px;}
+					@media only screen and (max-width: 600px) {
+						padding-right: 0;
 					}
-					.your-quest{
-						padding: 20px;
-						background:$white-bg;
-						@include box-shadow(0 3px 8px rgba(0,0,0,.15));
-						border-radius: 2px;
-						columns: 2;
-						margin-bottom: 40px;
-						@media only screen and (max-width: 600px) {
-							columns:1;
+					h3{
+						line-height: 1;
+						padding: 22px 0;
+						a{
+							text-transform: none;
+							color:$light-blue-text;
+							font-weight: normal;
 						}
-						li{
-							a{
-								background: url("../img/arrow-small.png") no-repeat left 6px;
-								font-family: 'latoregular';
-								font-size: .93rem;
-								color: $light-red;
-								padding-left: 12px;
-								line-height: 2.5;
-								&:hover{
-									color: $black-text;
+					}
+					p{
+						text-align: left;
+						a{
+							color: $light-red;
+							&:hover{
+								text-decoration: underline;
+								@media only screen and (max-width: 800px) {
 									text-decoration: none;
 								}
 							}
 						}
 					}
-					.order-wrap{
-						padding-right: 30%;
-						display: block;
-						position: relative;
-						@media only screen and (max-width: 600px) {
-							padding-right: 0;
+					a{color:$light-red}
+					.order-list{
+						padding-left: 30px;
+						li{
+							list-style-type: disc;
+							line-height: 1.8;
 						}
-						h3{
-							line-height: 1;
-							padding: 22px 0;
-							a{
-								text-transform: none;
-								color:blue;
-								font-weight: normal;
+					}
+					.simple-list{
+						padding-left: 15px;
+						li{
+							line-height: 1.5;
+							&:before{
+								content: "-";
+								position: relative;
+								left: -7px;
 							}
 						}
-						p{
-							text-align: left;
-							a{
-								color: blue;
-							}
+					}
+					.simple-numeric-list{
+						padding-left: 25px;
+						li{
+							list-style-type: inherit;
+							line-height: 1.5;
 						}
-						a{color:blue}
-						.order-list{
-							padding-left: 30px;
-							li{
-								list-style-type: disc;
-								line-height: 1.8;
-							}
+					}
+					.arrow-list{
+						padding-left: 10px;
+						li{
+							background: url("../img/arrow-small.png") left 8px no-repeat;
+							line-height: 1.5;
+							padding-left: 12px;
 						}
-						.simple-list{
-							padding-left: 15px;
-							li{
-								line-height: 1.5;
-								&:before{
-									content: "-";
-									position: relative;
-									left: -7px;
-								}
-							}
+					}
+					.sub-list{
+						padding-left: 25px;
+						>li{
+							list-style-type: disc; 
+							font-size: 1.07rem;
+							line-height: 1.5;
 						}
-						.simple-numeric-list{
-							padding-left: 25px;
-							li{
-								list-style-type: inherit;
-								line-height: 1.5;
-							}
-						}
-						.arrow-list{
-							padding-left: 10px;
-							li{
-								background: url("../img/arrow-small.png") left 8px no-repeat;
-								line-height: 1.5;
-								padding-left: 12px;
-							}
-						}
-						.sub-list{
-							padding-left: 25px;
-							>li{
-								list-style-type: disc; 
-								font-size: 1.07rem;
-								line-height: 1.5;
-							}
-						}
-						.keep-calm-ban{
-							display: block;
-							position: absolute;
-							background-size: cover !important;
-							right: -168px;
-							top: 20px;
-							width: 124px;
-							height: 145px;
-							@include box-shadow(10px 10px 6px rgba(0,0,0,.1));
-							@media only screen and (max-width: 600px) {display: none;}
-							&.ban-image04{background: url(../img/media/image04.png) top center no-repeat;}
-							&.ban-image09{background: url(../img/media/image09.png) top center no-repeat;}
-							&.ban-image12{background: url(../img/media/image12.png) top center no-repeat;}
-							&.ban-image13{background: url(../img/media/image13.png) top center no-repeat;}
-							&.ban-image14{background: url(../img/media/image14.png) top center no-repeat;}
-							&.ban-image15{background: url(../img/media/image15.png) top center no-repeat;}
-							&.ban-image16{background: url(../img/media/image16.png) top center no-repeat;}
-							&.ban-image17{background: url(../img/media/image17.png) top center no-repeat;}
-							&.ban-image18{background: url(../img/media/image18.png) top center no-repeat;}
-							&.ban-image19{background: url(../img/media/image19.png) top center no-repeat;}
-							&.ban-image21{background: url(../img/media/image21.png) top center no-repeat;}
-							&.ban-image23{background: url(../img/media/image23.png) top center no-repeat;}
-							&.ban-image25{background: url(../img/media/image25.png) top center no-repeat;}
-							&.ban-image27{background: url(../img/media/image27.png) top center no-repeat;}
+					}
+					.italic-list{
+						li{
+							font-style: italic;
+							line-height: 1.4;
 						}
 					}
 				}
-			// }
+			}
 		}
 	}
 	.side-panel{
@@ -545,7 +646,7 @@ body{
 			text-align: left;
 			margin-bottom: 0;
 			&.title{
-				font-family: 'rokkittregular';
+				font-family: $font-stack5;
 				font-weight: bold;
 				color: $white-text;
 				font-size: 1.43rem;
@@ -602,13 +703,13 @@ body{
 	}
 
 	h3{
-		font-family: 'rokkittregular';
+		font-family: $font-stack5;
 		font-size: 2.14rem;
 		color: $dark-grey-text;
 		line-height: 80px;
 	}
 	p{
-		font-family: 'latoregular';
+		font-family: $font-stack2;
 		font-size: 1.07rem;
 		color: $black-text;
 		line-height: 1.5;
@@ -624,111 +725,3 @@ body{
 	}
 }
 /* end: QUESTION */
-/* start: BOTTOM-INFO */
-.bottom-info{
-	background:url('../img/bot-info-bg.jpg') center top repeat;
-	padding: 55px 0;
-	position: relative;
-	@media only screen and (max-width: 800px) {
-		display: none;
-	}
-	.grey-logo{
-		position: absolute;
-		left: 50%;
-		top: -31px;
-		margin-left: -34px;
-		padding: 13px;
-		background:$lightest-grey;
-		border-radius: 50%;
-		span{
-			display: block;
-			background:url('../img/logo-sprite.png') -69px 0px no-repeat;
-			width: 43px;
-			height: 43px;
-		}
-	}
-	.bottom-info-layer{
-		@include box-sizing (border-box);
-		float: left;
-		width: 22%;
-		margin-right: 4%;
-		&:first-child{
-		}
-		&:last-child{
-			margin-right: 0;
-		}
-		&.soc{
-			p{
-				margin-top: 15px;
-			}
-		}
-		&.net{
-			p{
-				margin-top: 15px;
-				a{
-					font-family: 'keep_calmmedium';
-					font-size: .86rem;
-					color: $spec-text2;
-					&:hover{
-						text-decoration: none;
-					}
-				}
-			}
-		}
-		p{
-			font-family: 'latoregular';
-			font-size: .86rem;
-			color: $very-light-grey;
-			line-height: 1.5;
-			&.title{
-				margin-top: 0;
-				font-family: 'keep_calmmedium';
-				font-size: .86rem;
-				color: $white-text;
-				line-height: 4;
-				text-transform: uppercase;
-				border-bottom: 2px solid rgba(255,255,255,.2);
-			}
-			&.calm-label{
-				font-family: 'keep_calmmedium';
-				font-size: .86rem;
-				color: $spec-text;
-				line-height: 4;
-				text-transform: uppercase;
-				padding-left: 30px;
-				padding-bottom: 7px;
-				position: relative;
-				&:before{
-					position: absolute;
-					content: "";
-					width: 24px;
-					height: 22px;
-					background:url('../img/logo-small.png') top center no-repeat;
-					top: 12px;
-					left: 0;
-				}
-			}
-		}
-		ul{
-			padding-top: 16px;
-			li{
-				a{
-					font-family: 'latoregular';
-					font-size: .86rem;
-					color: $white-text;
-					padding-left: 12px;
-					background:url('../img/arrow-small.png') left 6px no-repeat;
-					line-height: 2;
-				}
-			}
-			&.foot-nav{
-				padding-top: 0;
-				li{
-					border-bottom: 1px dotted $dotted-border;
-					a{line-height: 3.3;}
-				}
-			}
-		}
-	}
-}
-/* end: BOTTOM-INFO */

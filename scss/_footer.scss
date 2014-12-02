@@ -1,9 +1,8 @@
 /* start: FOOTER */
 footer{
 	border-top: 1px solid $black-bg;
-	font-family: 'latoregular';
+	font-family: $font-stack2;
 	background:$black-light-bg;
-	padding: 20px 0;
 	clear: both;
 	@media only screen and (max-width: 800px) {
 		margin-top: -50px;
@@ -11,25 +10,153 @@ footer{
 		position: relative;
 	}
 	.wrapper{
-		ul{
+		width: 980px;
+		margin: 0 auto;
+		&:after {
+			content: ".";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			line-height: 0;
+			height: 0;
+		}
+		@media only screen and (max-width: 980px) {
+			width: 96%;
+			margin-right: 2%;
+			margin-left: 2%;
+		}
+	}
+	/* start: BOTTOM-INFO */
+	.bottom-info{
+		background:url('../img/bot-info-bg.jpg') center top repeat;
+		padding: 55px 0;
+		position: relative;
+		@media only screen and (max-width: 800px) {
+			display: none;
+		}
+		.grey-logo{
+			position: absolute;
+			left: 50%;
+			top: -31px;
+			margin-left: -34px;
+			padding: 13px;
+			background:$lightest-grey;
+			border-radius: 50%;
+			span{
+				display: block;
+				background:url('../img/logo-sprite.png') -69px 0px no-repeat;
+				width: 43px;
+				height: 43px;
+			}
+		}
+		.bottom-info-layer{
+			@include box-sizing (border-box);
 			float: left;
-			li{
-				display: inline-block;
-				font-size: .71rem;
-				color: $very-light-grey;
-				padding: 0 10px;
-				border-right:1px solid $very-light-grey;
-				&:first-child{
-					padding-left: 0;
+			width: 22%;
+			margin-right: 4%;
+			&:first-child{
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+			&.soc{
+				p{
+					margin-top: 15px;
 				}
-				&:last-child{
-					border-right: 0;
-					color: #fff;
+			}
+			&.net{
+				p{
+					margin-top: 15px;
+					a{
+						font-family: $font-stack3;
+						font-size: .86rem;
+						color: $spec-text2;
+						&:hover{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			p{
+				font-family: $font-stack2;
+				font-size: .86rem;
+				color: $very-light-grey;
+				line-height: 1.5;
+				&.title{
+					margin-top: 0;
+					font-family: $font-stack3;
+					font-size: .86rem;
+					color: $white-text;
+					line-height: 4;
+					text-transform: uppercase;
+					border-bottom: 2px solid rgba(255,255,255,.2);
+				}
+				&.calm-label{
+					font-family: $font-stack3;
+					font-size: .86rem;
+					color: $spec-text;
+					line-height: 4;
+					text-transform: uppercase;
+					padding-left: 30px;
+					padding-bottom: 7px;
+					position: relative;
+					&:before{
+						position: absolute;
+						content: "";
+						width: 24px;
+						height: 22px;
+						background:url('../img/logo-small.png') top center no-repeat;
+						top: 12px;
+						left: 0;
+					}
+				}
+			}
+			ul{
+				padding-top: 16px;
+				li{
+					a{
+						font-family: $font-stack2;
+						font-size: .86rem;
+						color: $white-text;
+						padding-left: 12px;
+						background:url('../img/arrow-small.png') left 6px no-repeat;
+						line-height: 2;
+					}
+				}
+				&.foot-nav{
+					padding-top: 0;
+					li{
+						border-bottom: 1px dotted $dotted-border;
+						a{line-height: 3.3;}
+					}
 				}
 			}
 		}
-		img{
-			float: right;
+	}
+	/* end: BOTTOM-INFO */
+	.wrapper{
+		&.foot-bot-layer{
+			padding: 20px 0;
+			ul{
+				float: left;
+				li{
+					display: inline-block;
+					font-size: .71rem;
+					color: $very-light-grey;
+					padding: 0 10px;
+					border-right:1px solid $very-light-grey;
+					&:first-child{
+						padding-left: 0;
+					}
+					&:last-child{
+						border-right: 0;
+						color: #fff;
+					}
+				}
+			}
+			img{
+				float: right;
+			}
 		}
 		@media only screen and (max-width: 800px) {display: none;}
 	}
@@ -49,7 +176,8 @@ footer{
 			a{
 				display: block;
 				padding: 9px 0 9px;
-				font-family: 'latobold';
+				font-family: $font-stack2;
+				font-weight: bold;
 				font-size: .64rem;
 				color: $white-text;
 				position: relative;
