@@ -1,0 +1,464 @@
+@font-face {
+  font-family: 'GothamRoundedMedium';
+  src: url("../fonts/gothamrounded-medium-webfont.eot");
+  src: url("../fonts/gothamrounded-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gothamrounded-medium-webfont.woff") format("woff"), url("../fonts/gothamrounded-medium-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KeepCalmMedium';
+  src: url("../fonts/keepcalm-medium-webfont.eot");
+  src: url("../fonts/keepcalm-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/keepcalm-medium-webfont.woff") format("woff"), url("../fonts/keepcalm-medium-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-reg-webfont.eot");
+  src: url("../fonts/lato-reg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-reg-webfont.woff") format("woff"), url("../fonts/lato-reg-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-bol-webfont.eot");
+  src: url("../fonts/lato-bol-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-bol-webfont.woff") format("woff"), url("../fonts/lato-bol-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-regita-webfont.eot");
+  src: url("../fonts/lato-regita-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regita-webfont.woff") format("woff"), url("../fonts/lato-regita-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Rokkitt';
+  src: url("../fonts/rokkitt-webfont.eot");
+  src: url("../fonts/rokkitt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rokkitt-webfont.woff2") format("woff2"), url("../fonts/rokkitt-webfont.woff") format("woff"), url("../fonts/rokkitt-webfont.ttf") format("truetype"), url("../fonts/rokkitt-webfont.svg#rokkittregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rokkittbold';
+  src: url("../fonts/rokkitt-bold-webfont.eot");
+  src: url("../fonts/rokkitt-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rokkitt-bold-webfont.woff2") format("woff2"), url("../fonts/rokkitt-bold-webfont.woff") format("woff"), url("../fonts/rokkitt-bold-webfont.ttf") format("truetype"), url("../fonts/rokkitt-bold-webfont.svg#rokkittbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Variables */
+/** Colors **/
+/** Fonts **/
+/* line 1, ../scss/_reset.scss */
+* {
+  vertical-align: baseline;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+/* line 11, ../scss/_reset.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 15, ../scss/_reset.scss */
+html {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+/* line 16, ../scss/_reset.scss */
+body {
+  font-family: Lato, sans-serif;
+}
+
+/* line 17, ../scss/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 20, ../scss/_reset.scss */
+a img, :link img, :visited img {
+  border: 0;
+}
+
+/* line 21, ../scss/_reset.scss */
+a {
+  outline: none;
+  -moz-outline: 0;
+  border: none;
+  border-width: 0px;
+}
+
+/* line 22, ../scss/_reset.scss */
+a:active {
+  outline: none;
+  -moz-outline: 0;
+}
+
+/* line 23, ../scss/_reset.scss */
+a:focus {
+  outline: none;
+  -moz-outline: 0;
+}
+
+/* line 24, ../scss/_reset.scss */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 25, ../scss/_reset.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 27, ../scss/_reset.scss */
+li {
+  list-style-type: none;
+}
+
+/* line 28, ../scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 29, ../scss/_reset.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 31, ../scss/_reset.scss */
+input, select, textarea {
+  font-family: tahoma;
+  color: #000;
+  padding: 5px;
+}
+
+/* line 32, ../scss/_reset.scss */
+.clear {
+  clear: both;
+  font-size: 0pt;
+  line-height: 0px;
+  height: 0px;
+}
+
+/******************/
+/* The code of mixins */
+/* line 7, ../scss/ie8.scss */
+.jspDrag {
+  background: #999999;
+}
+
+/* line 13, ../scss/ie8.scss */
+.mobile-wrap {
+  zoom: 1;
+}
+
+/* line 16, ../scss/ie8.scss */
+.search-click {
+  display: none;
+}
+
+/* line 20, ../scss/ie8.scss */
+.head-ban p .mob-arrow {
+  display: none !important;
+}
+
+/* line 25, ../scss/ie8.scss */
+header .wrapper .logo-txt {
+  background: transparent url("../img/ie-logo-link-bg.png") center top no-repeat;
+  width: 205px !important;
+  height: 28px !important;
+  margin-left: -102px;
+}
+/* line 30, ../scss/ie8.scss */
+header .wrapper .logo-txt:before, header .wrapper .logo-txt:after {
+  width: 0 !important;
+  height: 0 !important;
+  background-color: transparent !important;
+}
+/* line 41, ../scss/ie8.scss */
+header .wrapper .profile-block > li.notif #notif-button .count {
+  behavior: url(PIE/PIE.htc);
+  zoom: 1;
+}
+/* line 55, ../scss/ie8.scss */
+header .wrapper .profile-block > li.notif #notif-list-wrap {
+  outline: 1px solid #999999;
+}
+/* line 57, ../scss/ie8.scss */
+header .wrapper .profile-block > li.notif #notif-list-wrap:before {
+  border: 13px solid #f0f0f0;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  top: -25px !important;
+  box-shadow: 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 transparent;
+}
+/* line 69, ../scss/ie8.scss */
+header .wrapper .profile-block > li.notif #notif-list-wrap:after {
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  border: 13px solid #ffffff;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  right: 10px !important;
+  top: -24px !important;
+}
+/* line 81, ../scss/ie8.scss */
+header .wrapper .profile-block > li.notif #notif-list-wrap p.title {
+  border-bottom: 1px solid #999999;
+}
+/* line 90, ../scss/ie8.scss */
+header .wrapper .profile-block > li.notif #notif-list-wrap #notif-list li .some-action li.not-read .head-com-block {
+  left: -145px !important;
+}
+/* line 95, ../scss/ie8.scss */
+header .wrapper .profile-block > li.notif #notif-list-wrap #notif-list li .some-action li.not-close .head-com-block {
+  left: -95px !important;
+}
+/* line 107, ../scss/ie8.scss */
+header .wrapper .profile-block > li.avatar.log-in:hover {
+  cursor: pointer;
+  background: #cf2200;
+  border-color: #bf1f00;
+}
+/* line 111, ../scss/ie8.scss */
+header .wrapper .profile-block > li.avatar.log-in:hover p {
+  color: #ffffff;
+}
+/* line 114, ../scss/ie8.scss */
+header .wrapper .profile-block > li.avatar.log-in:hover .profile-list li {
+  background: #ffffff;
+}
+/* line 117, ../scss/ie8.scss */
+header .wrapper .profile-block > li.avatar.log-in:hover .profile-list li a:hover {
+  color: #c92100;
+}
+/* line 131, ../scss/ie8.scss */
+header .wrapper .head-right .search-wrap .search-form input[type="text"] {
+  height: 20px;
+}
+/* line 138, ../scss/ie8.scss */
+header .wrapper .head-right #menu-button:hover + .menu-list {
+  display: block !important;
+}
+
+/* line 152, ../scss/ie8.scss */
+.sidebar .side-panel .popular-link li a:hover:before {
+  border-left-color: #000000;
+}
+/* line 156, ../scss/ie8.scss */
+.sidebar .side-panel .popular-link li a:before, .sidebar .side-panel .popular-link li a:after {
+  position: absolute;
+  top: 8px;
+  content: "";
+  width: 0 !important;
+  height: 0 !important;
+  border: 5px solid #ffffff;
+  border-top-color: transparent;
+  border-right: 5px solid transparent !important;
+  border-bottom-color: transparent;
+}
+/* line 168, ../scss/ie8.scss */
+.sidebar .side-panel .popular-link li a:before {
+  left: -15px;
+}
+/* line 171, ../scss/ie8.scss */
+.sidebar .side-panel .popular-link li a:after {
+  left: -16px;
+  border-left-color: #56737e;
+}
+
+/* line 183, ../scss/ie8.scss */
+.content .create-own .comment-block .mobile-comment {
+  display: none;
+}
+/* line 193, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image04 {
+  background: url(../img/media/ie/image04.png) top center no-repeat;
+}
+/* line 194, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image09 {
+  background: url(../img/media/ie/image09.png) top center no-repeat;
+}
+/* line 195, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image12 {
+  background: url(../img/media/ie/image12.png) top center no-repeat;
+}
+/* line 196, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image13 {
+  background: url(../img/media/ie/image13.png) top center no-repeat;
+}
+/* line 197, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image14 {
+  background: url(../img/media/ie/image14.png) top center no-repeat;
+}
+/* line 198, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image15 {
+  background: url(../img/media/ie/image15.png) top center no-repeat;
+}
+/* line 199, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image16 {
+  background: url(../img/media/ie/image16.png) top center no-repeat;
+}
+/* line 200, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image17 {
+  background: url(../img/media/ie/image17.png) top center no-repeat;
+}
+/* line 201, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image18 {
+  background: url(../img/media/ie/image18.png) top center no-repeat;
+}
+/* line 202, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image19 {
+  background: url(../img/media/ie/image19.png) top center no-repeat;
+}
+/* line 203, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image21 {
+  background: url(../img/media/ie/image21.png) top center no-repeat;
+}
+/* line 204, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image23 {
+  background: url(../img/media/ie/image23.png) top center no-repeat;
+}
+/* line 205, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image25 {
+  background: url(../img/media/ie/image25.png) top center no-repeat;
+}
+/* line 206, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image27 {
+  background: url(../img/media/ie/image27.png) top center no-repeat;
+}
+/* line 207, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image28 {
+  background: url(../img/media/ie/image28.png) top center no-repeat;
+}
+/* line 208, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image29 {
+  background: url(../img/media/ie/image29.png) top center no-repeat;
+}
+/* line 209, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image30 {
+  background: url(../img/media/ie/image30.png) top center no-repeat;
+}
+/* line 210, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image31 {
+  background: url(../img/media/ie/image31.png) top center no-repeat;
+}
+/* line 211, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image32 {
+  background: url(../img/media/ie/image32.png) top center no-repeat;
+}
+/* line 212, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image33 {
+  background: url(../img/media/ie/image33.png) top center no-repeat;
+}
+/* line 213, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image34 {
+  background: url(../img/media/ie/image34.png) top center no-repeat;
+}
+/* line 214, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image35 {
+  background: url(../img/media/ie/image35.png) top center no-repeat;
+}
+/* line 215, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image36 {
+  background: url(../img/media/ie/image36.png) top center no-repeat;
+}
+/* line 216, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image37 {
+  background: url(../img/media/ie/image37.png) top center no-repeat;
+}
+/* line 217, ../scss/ie8.scss */
+.content .topics-open .tabs .tab-content .section .keep-calm-ban.ban-image38 {
+  background: url(../img/media/ie/image38.png) top center no-repeat;
+}
+
+/* line 229, ../scss/ie8.scss */
+.content-poster.tabs-menu li.current a:before {
+  position: absolute;
+  content: "";
+  border: 11px solid #d9d9d9;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  bottom: -22px;
+  left: 50%;
+  margin-left: -8px;
+}
+/* line 240, ../scss/ie8.scss */
+.content-poster.tabs-menu li.current a:after {
+  background: transparent !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute;
+  content: "";
+  border: 10px solid #ffffff;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  bottom: -20px !important;
+  left: 50%;
+  margin-left: -7px;
+}
+
+/* line 262, ../scss/ie8.scss */
+.tabs .tab-content h3.section:before, .tabs .tab-content h3.section:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px !important;
+  content: "";
+  width: 0 !important;
+  height: 0 !important;
+  border-width: 8px !important;
+  border-style: solid;
+  border-left-color: #000000;
+  border-top-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent;
+}
+/* line 277, ../scss/ie8.scss */
+.tabs .tab-content h3.section:before {
+  right: 20px;
+}
+/* line 280, ../scss/ie8.scss */
+.tabs .tab-content h3.section:after {
+  right: 21px !important;
+  border-left-color: #f7f7f7;
+}
+/* line 285, ../scss/ie8.scss */
+.tabs .tab-content h3.section.current:before, .tabs .tab-content h3.section.current:after {
+  right: 25px !important;
+  margin-top: -5px !important;
+  border-top-color: #000000 !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent;
+}
+/* line 294, ../scss/ie8.scss */
+.tabs .tab-content h3.section.current:after {
+  margin-top: -6px !important;
+  border-top-color: #f7f7f7 !important;
+}
+
+/* line 303, ../scss/ie8.scss */
+footer {
+  background: #f8f8f8 url("../img/poster/foot-pallette.jpg") center bottom repeat-x;
+}

@@ -7,31 +7,43 @@
 body{
 	background:#000 url(../img/poster/poster-bg-img.jpg) top center no-repeat;
 }
-.wrapper{
-	width: 1275px;
-	margin: 0 auto;
-}
 .mobile-wrap{
 	background:rgba(0,0,0,.8);
 	overflow: hidden;
 	padding-bottom: 176px;
+	@media only screen and (max-width:660px){
+		padding-bottom: 0;
+	}
 }
 .head-ban{
-	width: 1275px;
 	padding-top: 146px;
 	margin: 0 auto 25px;
 	position: relative;
 	background:url('../img/poster/banner.jpg') center bottom no-repeat;
+	@media only screen and (max-width: 850px) {
+		background:none;
+		padding-top: 68px;
+	}
+	@media only screen and (max-width: 660px) {
+		display: none;
+	}
 	.poster-close{
 		width: 29px;
 		height: 29px;
 		border:2px solid $close-color;
 		border-radius: 3px;
+		behavior: url(PIE/PIE.htc);
 		display: block;
 		position: absolute;
 		right: 0;
 		top: 54px;
 		opacity: .8;
+		@media only screen and (max-width: 850px) {
+			top: 30px;
+		}
+		@media only screen and (max-width: 1000px) {
+			opacity: 1;
+		}
 		&:hover{
 			cursor: pointer;
 			opacity: 1;
@@ -46,6 +58,7 @@ body{
 			top: 13px;
 			left: 7px;
 			border-radius: 2px;
+			behavior: url(PIE/PIE.htc);
 		}
 		&:before{
 				 -moz-transform: rotate(-45deg);
@@ -72,51 +85,38 @@ body{
 	color: $black-text !important;
 	text-align: center;
 	width: 100px;
-	padding: 10px 0 7px;
+	line-height: 28px !important;
 	border-radius: 3px;
 	border: 1px solid $grey-border;
+	behavior: url(PIE/PIE.htc);
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.75), 0 2px 3px rgba(116,116,116,.16);
 	box-shadow: inset 0 1px 0 rgba(255,255,255,.75), 0 2px 3px rgba(116,116,116,.16);
-	background: $grey-btn-grad1; /* Old browsers */
-	background: -moz-linear-gradient(top, $grey-btn-grad1 0%, $grey-btn-grad2 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$grey-btn-grad1), color-stop(100%,$grey-btn-grad2)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, $grey-btn-grad1 0%,$grey-btn-grad2 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, $grey-btn-grad1 0%,$grey-btn-grad2 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, $grey-btn-grad1 0%,$grey-btn-grad2 100%); /* IE10+ */
-	background: linear-gradient(to bottom, $grey-btn-grad1 0%,$grey-btn-grad2 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$grey-btn-grad1', endColorstr='$grey-btn-grad2',GradientType=0 ); /* IE6-9 */
+	background: $grey-btn-grad2; /* Old browsers */
+	background: -moz-linear-gradient(top, $grey-btn-grad2 0%, $grey-btn-grad1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$grey-btn-grad2), color-stop(100%,$grey-btn-grad1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $grey-btn-grad2 0%,$grey-btn-grad1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $grey-btn-grad2 0%,$grey-btn-grad1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $grey-btn-grad2 0%,$grey-btn-grad1 100%); /* IE10+ */
+	background: linear-gradient(to bottom, $grey-btn-grad2 0%,$grey-btn-grad1 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dcdcdc',GradientType=0 ); /* IE6-9 */
 	&:hover{
 		text-decoration: none;
-		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.75), 0 2px 3px rgba(116,116,116,.26);
-		box-shadow: inset 0 1px 0 rgba(255,255,255,.75), 0 2px 3px rgba(116,116,116,.26);
-		background: $grey-btn-grad-hover1; /* Old browsers */
-		background: -moz-linear-gradient(top, $grey-btn-grad-hover1 0%, $grey-btn-grad-hover2 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$grey-btn-grad-hover1), color-stop(100%,$grey-btn-grad-hover2)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, $grey-btn-grad-hover1 0%,$grey-btn-grad-hover2 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, $grey-btn-grad-hover1 0%,$grey-btn-grad-hover2 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, $grey-btn-grad-hover1 0%,$grey-btn-grad-hover2 100%); /* IE10+ */
-		background: linear-gradient(to bottom, $grey-btn-grad-hover1 0%,$grey-btn-grad-hover2 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$grey-btn-grad-hover1', endColorstr='$grey-btn-grad-hover2',GradientType=0 ); /* IE6-9 */
+		@media only screen and (min-width: 1000px) {
+			-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.75), 0 2px 3px rgba(116,116,116,.26);
+			box-shadow: inset 0 1px 0 rgba(255,255,255,.75), 0 2px 3px rgba(116,116,116,.26);
+			background: $grey-btn-grad-hover1; /* Old browsers */
+			background: -moz-linear-gradient(top, $grey-btn-grad-hover1 0%, $grey-btn-grad-hover2 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$grey-btn-grad-hover1), color-stop(100%,$grey-btn-grad-hover2)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, $grey-btn-grad-hover1 0%,$grey-btn-grad-hover2 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, $grey-btn-grad-hover1 0%,$grey-btn-grad-hover2 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, $grey-btn-grad-hover1 0%,$grey-btn-grad-hover2 100%); /* IE10+ */
+			background: linear-gradient(to bottom, $grey-btn-grad-hover1 0%,$grey-btn-grad-hover2 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(220,220,220,.6)', endColorstr='rgba(237,237,237,.6)',GradientType=0 ); /* IE6-9 */
+		}
 	}
 	&:active{top: 2px;}
 }
-/*start:scrollpane*/
-/*scrollpane custom CSS*/
-.jspVerticalBar {
-		width: 8px;
-		background: transparent;
-		right:3px;
-}
-.jspTrack {
-		background: transparent;
-}
-.jspDrag {
-		background: rgba(0,0,0,.5);
-		-webkit-border-radius:5px;
-		-moz-border-radius:5px;
-		border-radius:5px;
-}
-/*end:scrollpane*/
+
 #popup-wrap{
 	display: none;
 	width: 100%;
@@ -130,8 +130,11 @@ body{
 		width: 550px;
 		left: 50%;
 		margin-left: -275px;
-		top: 10%;
+		top: 17%;
 		background:$white-bg;
+		@media only screen and (max-width: 550px) {
+			width: 100%;
+		}
 		#close-pop{
 			position: absolute;
 			right: 15px;
@@ -182,6 +185,7 @@ body{
 			width: 50px;
 			height: 50px;
 			border-radius: 50%;
+			behavior: url(PIE/PIE.htc);
 			background:$white-bg;
 			position: absolute;
 			left: 50%;
@@ -225,7 +229,7 @@ body{
 					clear: both;
 					overflow: hidden;
 					border-bottom: 1px solid $grey-border;
-					img{float: left;border-radius: 50%}
+					img{float: left;border-radius: 50%;behavior: url(PIE/PIE.htc);}
 					p{
 						padding-left: 15px;
 						font-size: .93rem;
@@ -247,10 +251,22 @@ body{
 .poster-main-wrap{
 	width: 905px;
 	margin: 0 auto;
-
+	@media only screen and (max-width: 905px) {
+		width: 96%;
+		margin-right: 2%;
+		margin-left: 2%;
+	}
+	@media only screen and (max-width: 660px) {
+		width: 100%;
+		margin: 0;
+	}
 	.sidebar{
 		width: 26%;
 		float: left;
+		@media only screen and (max-width: 660px) {
+			float: none;
+			width: 100%;
+		}
 		.side-product{
 			padding: 18px;
 			margin-bottom: 10px;
@@ -262,8 +278,14 @@ body{
 			background: -o-linear-gradient(top, $gradient-gray 0%,$white-bg 100%); /* Opera 11.10+ */
 			background: -ms-linear-gradient(top, $gradient-gray 0%,$white-bg 100%); /* IE10+ */
 			background: linear-gradient(to bottom, $gradient-gray 0%,$white-bg 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-gray', endColorstr='$white-bg',GradientType=0 ); /* IE6-9 */
-
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+			@media only screen and (max-width: 660px) {
+				box-shadow: 0 2px 5px rgba(0,0,0,.10);
+				margin-bottom: 0;
+				position: relative;
+				z-index: 200;
+				padding: 18px 5px;
+			}
 			p{
 				&.title{
 					text-align: center;
@@ -285,10 +307,12 @@ body{
 				position: relative;
 				overflow: hidden;
 				display: block;
-				-webkit-transition: height 500ms ease-out-in 0s;
-				-moz-transition: height 500ms ease-out-in 0s;
-				-o-transition: height 500ms ease-out-in 0s;
-				transition: height 500ms ease-out-in 0s;
+				text-align: center;
+				-webkit-transition: height .5s ease-out-in 0s;
+					 -moz-transition: height .5s ease-out-in 0s;
+						 -o-transition: height .5s ease-out-in 0s;
+								transition: height .5s ease-out-in 0s;
+				@media only screen and (max-width: 660px) {height: auto;}
 				&.all-product{
 					height: 100%;
 				}
@@ -298,8 +322,16 @@ body{
 					@include box-sizing(border-box);
 					display: inline-block;
 					vertical-align: top;
+					@media only screen and (min-width: 660px) and (max-width: 905px) {
+						width: 45%;
+					}
 					&:nth-child(2n){
 						margin-left: 9px;
+						@media only screen and (max-width: 660px) {margin-left: 4px;}
+					}
+					@media only screen and (max-width: 660px) {
+						margin-left: 4px;
+						margin-right: 4px;
 					}
 					a{
 						display: block;
@@ -311,6 +343,7 @@ body{
 							background:$white-bg;
 							overflow: hidden;
 							margin-bottom: 10px;
+							img{width: 100%;}
 						}
 						p{
 							text-align: center;
@@ -320,12 +353,14 @@ body{
 						}
 						&:hover{
 							text-decoration: none;
-							span{
-								box-shadow:0 3px 10px $poster-product-shadow;
-								-webkit-box-shadow:0 3px 10px $poster-product-shadow;
-							}
-							p{
-								color: $light-red;
+							@media only screen and (min-width: 1000px) {
+								span{
+									box-shadow:0 3px 10px $poster-product-shadow;
+									-webkit-box-shadow:0 3px 10px $poster-product-shadow;
+								}
+								p{
+									color: $light-red;
+								}
 							}
 						}
 					}
@@ -337,12 +372,16 @@ body{
 				font-size: 1rem;
 				color: $white-text;
 				border-radius: 3px;
+				behavior: url(PIE/PIE.htc);
 				padding: 16px;
 				display: block;
 				background:$green-button;
 				border:1px solid $green-border;
 				-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.16), inset 0 0 27px rgba(119,163,0,.27);
 				box-shadow:inset 0 1px 0 rgba(255,255,255,.16), inset 0 0 27px rgba(119,163,0,.27);
+				@media only screen and (max-width: 660px) {
+					display: none;
+				}
 				&:hover{
 					text-decoration: none;
 				}
@@ -354,6 +393,7 @@ body{
 					width: 8px;
 					height: 2px;
 					border-radius: 2px;
+					behavior: url(PIE/PIE.htc);
 					background:$white-bg;
 					right: 16px;
 				}
@@ -387,13 +427,17 @@ body{
 						display: block;
 						border-radius: 50%;
 						margin-bottom: 15px;
+						behavior: url(PIE/PIE.htc);
 						img{
 							margin: 0 auto;
 							border-radius: 50%;
+							behavior: url(PIE/PIE.htc);
 							display: block;
 							&:hover{
-								-webkit-box-shadow: 2px 4px 10px rgba(0,0,0,.3);
-								box-shadow: 2px 4px 10px rgba(0,0,0,.3);
+								@media only screen and (min-width: 1000px) {
+									-webkit-box-shadow: 2px 4px 10px rgba(0,0,0,.3);
+									box-shadow: 2px 4px 10px rgba(0,0,0,.3);
+								}
 							}
 						}
 					}
@@ -401,6 +445,11 @@ body{
 						font-size: .93rem;
 						color: $light-red;
 						font-weight: bold;
+						&:hover{
+							@media only screen and (max-width: 1000px) {
+								text-decoration: none;
+							}
+						}
 					}
 				}
 				.grey-button{
@@ -421,6 +470,9 @@ body{
 				padding: 18px;
 				-webkit-box-shadow: inset 0 1px 2px $poster-product-shadow;
 				box-shadow: inset 0 1px 2px $poster-product-shadow;
+				@media only screen and (max-width:660px){
+					background:$white-bg;
+				}
 				p{
 					&.title{
 						text-align: center;
@@ -432,19 +484,42 @@ body{
 					}
 				}
 				.poster-image{
+					text-align: center;
 					li{
 						width: 93px;
 						height: 109px;
 						display: inline-block;
-						-webkit-box-shadow: 0 0 3px $poster-product-shadow;
-						box-shadow: 0 0 3px $poster-product-shadow;
 						margin-bottom: 10px;
+						@media only screen and (min-width: 660px) and (max-width: 905px) {
+							width: 45%;
+							height: auto;
+						}
+						@media only screen and (max-width: 660px){
+							margin-right: 5px;
+							margin-left: 5px;
+						}
+						a{
+							img{
+								width: 100%;
+								-webkit-box-shadow: 0 0 3px $poster-product-shadow;
+								box-shadow: 0 0 3px $poster-product-shadow;
+							}
+						}
 						&:nth-child(2n){
 							margin-left: 10px;
+							@media only screen and (max-width: 660px){
+								margin-left: 5px;
+							}
 						}
 						&:hover{
-							-webkit-box-shadow: 3px 3px 6px $poster-product-shadow;
-							box-shadow: 3px 3px 6px $poster-product-shadow;
+							a{
+								img{
+									@media only screen and (min-width: 1000px) {
+										-webkit-box-shadow: 3px 3px 6px $poster-product-shadow;
+										box-shadow: 3px 3px 6px $poster-product-shadow;
+									}
+								}
+							}
 						}
 					}
 				}
@@ -455,6 +530,9 @@ body{
 				background:$grey-white-bg;
 				padding: 18px;
 				text-align: center;
+				@media only screen and (max-width:660px){
+					background:$white-bg;
+				}
 				a{
 					font-size: .86rem;
 					color: $light-red;
@@ -468,51 +546,70 @@ body{
 		width: 73%;
 		float: right;
 		border-radius: 5px;
+		behavior: url(PIE/PIE.htc);
 		-webkit-box-shadow: 0 0 11px 2px $poster-content-shadow;
 		box-shadow: 0 0 11px 2px $poster-content-shadow;
+		@media only screen and (max-width: 660px) {
+			float: none;
+			width: 100%;
+			// margin-top: 36px;
+		}
+		.yellow-like,
+		.red-star{
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			top: 0;
+			z-index: 95;
+		}
+		.yellow-like{
+			left: 0;
+			background:url(../img/poster/yellow-like.png);
+		}
+		.red-star{
+			right: 0;
+			background:url(../img/poster/red-star.png);
+		}
 		.content-title{
 			background:$white-bg;
 			position: relative;
-			.yellow-like,
-			.red-star{
-				position: absolute;
-				width: 60px;
-				height: 60px;
-				top: 0;
-			}
-			.yellow-like{
-				left: 0;
-				background:url(../img/poster/yellow-like.png);
-			}
-			.red-star{
-				right: 0;
-				background:url(../img/poster/red-star.png);
+			@media only screen and (max-width: 660px) {
+				.yellow-like,
+				.red-star{display: none;}
 			}
 			p{
 				font-family: $font-stack1;
 				font-size: 1.79rem;
-				line-height: 78px;
 				color: $darkness-grey-text;
 				text-align: center;
 				text-transform: uppercase;
+				padding: 29px 20px;
+				@media only screen and (max-width: 660px) {
+					padding: 20px;
+				}
 			}
 		}
 		.create-own{
-
+			background: $keep-wrap-grad; /* Old browsers */
+			background: -moz-linear-gradient(top, $keep-wrap-grad 0%, $white-bg 50%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$keep-wrap-grad), color-stop(50%,$white-bg)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, $keep-wrap-grad 0%,$white-bg 50%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, $keep-wrap-grad 0%,$white-bg 50%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, $keep-wrap-grad 0%,$white-bg 50%); /* IE10+ */
+			background: linear-gradient(to bottom, $keep-wrap-grad 0%,$white-bg 50%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+			@media only screen and (max-width: 660px) {
+				background:$white-bg;
+				padding-bottom: 30px;
+			}
 			.keep-wrap{
 				border-top:1px solid $white-light-grey;
-				padding: 20px 30px 30px;
-				background: $keep-wrap-grad; /* Old browsers */
-				background: -moz-linear-gradient(top, $keep-wrap-grad 0%, $white-bg 100%); /* FF3.6+ */
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$keep-wrap-grad), color-stop(100%,$white-bg)); /* Chrome,Safari4+ */
-				background: -webkit-linear-gradient(top, $keep-wrap-grad 0%,$white-bg 100%); /* Chrome10+,Safari5.1+ */
-				background: -o-linear-gradient(top, $keep-wrap-grad 0%,$white-bg 100%); /* Opera 11.10+ */
-				background: -ms-linear-gradient(top, $keep-wrap-grad 0%,$white-bg 100%); /* IE10+ */
-				background: linear-gradient(to bottom, $keep-wrap-grad 0%,$white-bg 100%); /* W3C */
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$keep-wrap-grad', endColorstr='$white-bg',GradientType=0 ); /* IE6-9 */
-
+				padding: 20px 4%;
+				@media only screen and (max-width:660px){
+					padding-right: 13px;
+					padding-left: 13px;
+				}
 				.but-block{
-					padding-bottom: 23px;
 					&:after {
 						content: ".";
 						display: block;
@@ -533,25 +630,28 @@ body{
 						border:1px solid $red-border;
 						box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 3px rgba(0,0,0,.11);
 						-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 3px rgba(0,0,0,.11);
-						border-radius: 3px;
-						background: $red-btn-grad1; /* Old browsers */
-						background: -moz-linear-gradient(top, $red-btn-grad1 0%, $red-bg 100%); /* FF3.6+ */
-						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$red-btn-grad1), color-stop(100%,$red-bg)); /* Chrome,Safari4+ */
-						background: -webkit-linear-gradient(top, $red-btn-grad1 0%,$red-bg 100%); /* Chrome10+,Safari5.1+ */
-						background: -o-linear-gradient(top, $red-btn-grad1 0%,$red-bg 100%); /* Opera 11.10+ */
-						background: -ms-linear-gradient(top, $red-btn-grad1 0%,$red-bg 100%); /* IE10+ */
-						background: linear-gradient(to bottom, $red-btn-grad1 0%,$red-bg 100%); /* W3C */
-						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$red-btn-grad1', endColorstr='$red-bg',GradientType=0 ); /* IE6-9 */
+						border-radius: 4px;
+						behavior: url(PIE/PIE.htc);
+						background: $red-bg; /* Old browsers */
+						background: -moz-linear-gradient(top, $red-bg 0%, $red-btn-grad1 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$red-bg), color-stop(100%,$red-btn-grad1)); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top, $red-bg 0%,$red-btn-grad1 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top, $red-bg 0%,$red-btn-grad1 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top, $red-bg 0%,$red-btn-grad1 100%); /* IE10+ */
+						background: linear-gradient(to bottom, $red-bg 0%,$red-btn-grad1 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf2200', endColorstr='#bf1f00',GradientType=0 ); /* IE6-9 */
 						&:hover{
 							text-decoration: none;
-							background: $red-btn-grad-hover1; /* Old browsers */
-							background: -moz-linear-gradient(top, $red-btn-grad-hover1 0%, $red-btn-grad-hover2 100%); /* FF3.6+ */
-							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$red-btn-grad-hover1), color-stop(100%,$red-btn-grad-hover2)); /* Chrome,Safari4+ */
-							background: -webkit-linear-gradient(top, $red-btn-grad-hover1 0%,$red-btn-grad-hover2 100%); /* Chrome10+,Safari5.1+ */
-							background: -o-linear-gradient(top, $red-btn-grad-hover1 0%,$red-btn-grad-hover2 100%); /* Opera 11.10+ */
-							background: -ms-linear-gradient(top, $red-btn-grad-hover1 0%,$red-btn-grad-hover2 100%); /* IE10+ */
-							background: linear-gradient(to bottom, $red-btn-grad-hover1 0%,$red-btn-grad-hover2 100%); /* W3C */
-							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$red-btn-grad-hover1', endColorstr='$red-btn-grad-hover2',GradientType=0 ); /* IE6-9 */
+							@media only screen and (min-width: 1000px) {
+								background: $red-btn-grad-hover1; /* Old browsers */
+								background: -moz-linear-gradient(top, $red-btn-grad-hover1 0%, $red-btn-grad-hover2 100%); /* FF3.6+ */
+								background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$red-btn-grad-hover1), color-stop(100%,$red-btn-grad-hover2)); /* Chrome,Safari4+ */
+								background: -webkit-linear-gradient(top, $red-btn-grad-hover1 0%,$red-btn-grad-hover2 100%); /* Chrome10+,Safari5.1+ */
+								background: -o-linear-gradient(top, $red-btn-grad-hover1 0%,$red-btn-grad-hover2 100%); /* Opera 11.10+ */
+								background: -ms-linear-gradient(top, $red-btn-grad-hover1 0%,$red-btn-grad-hover2 100%); /* IE10+ */
+								background: linear-gradient(to bottom, $red-btn-grad-hover1 0%,$red-btn-grad-hover2 100%); /* W3C */
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d52300', endColorstr='#e42500',GradientType=0 ); /* IE6-9 */
+							}
 						}
 						&:active{top: 2px;}
 					}
@@ -568,6 +668,7 @@ body{
 							box-shadow: 0 3px 8px rgba(0,0,0,.15);
 							background:$white-bg;
 							border-radius: 2px;
+							behavior: url(PIE/PIE.htc);
 							right: 0;
 							top: 38px;
 							min-width: 224px;
@@ -587,11 +688,14 @@ body{
 										width: 40px;
 										height: 40px;
 										border-radius: 50%;
+										behavior: url(PIE/PIE.htc);
 										position: relative;
 										background-image:url(../img/poster/social/soc-sprite1.png);
 										background-repeat: no-repeat;
 										&:hover{
-											box-shadow: 0 5px 10px rgba(0,0,0,.2);
+											@media only screen and (min-width: 1000px) {
+												box-shadow: 0 5px 10px rgba(0,0,0,.2);
+											}
 										}
 										&.fb{background-position:0px -67px;}
 										&.tw{background-position:-41px -67px;}
@@ -605,6 +709,7 @@ body{
 							z-index: 200;
 							display: none;
 							border-radius: 2px;
+							behavior: url(PIE/PIE.htc);
 							-webkit-box-shadow: 0 3px 8px rgba(0,0,0,.15);
 							box-shadow: 0 3px 8px rgba(0,0,0,.15);
 							background:$white-bg;
@@ -636,13 +741,15 @@ body{
 										&.rp{background-position: -95px -2px;top: 15px;width: 10px;height: 12px;}
 									}
 									&:hover{
-										color: $light-red;
 										text-decoration: none;
-										span{
-											&.dl{background-position: -51px -17px;}
-											&.ec{background-position: -79px -21px;}
-											&.sl{background-position: -65px -19px;}
-											&.rp{background-position: -95px -19px;}
+										@media only screen and (min-width: 1000px) {
+											color: $light-red;
+											span{
+												&.dl{background-position: -51px -17px;}
+												&.ec{background-position: -79px -21px;}
+												&.sl{background-position: -65px -19px;}
+												&.rp{background-position: -95px -19px;}
+											}
 										}
 									}
 								}
@@ -656,14 +763,17 @@ body{
 							height: 34px;
 							border:1px solid $grey-border;
 							&:hover{
-								cursor: pointer;
-								top: -1px;
-								-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
-								box-shadow: 0 1px 3px rgba(0,0,0,.3);
-								z-index: 200;
+								@media only screen and (min-width: 1000px) {
+									cursor: pointer;
+									top: -1px;
+									-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+									box-shadow: 0 1px 3px rgba(0,0,0,.3);
+									z-index: 200;
+								}
 							}
 							&.share-conn{
-								border-radius: 2px 0 0 2px;
+								border-radius: 3px 0 0 3px;
+								behavior: url(PIE/PIE.htc);
 								background: url(../img/poster/poster-sprite.png) -127px 10px no-repeat, $white-bg; /* Old browsers */
 								background: url(../img/poster/poster-sprite.png) -127px 10px no-repeat,-moz-linear-gradient(top, $white-bg 0%, $grey-btn-grad2 100%); /* FF3.6+ */
 								background: url(../img/poster/poster-sprite.png) -127px 10px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,$white-bg), color-stop(100%,$grey-btn-grad2)); /* Chrome,Safari4+ */
@@ -671,7 +781,7 @@ body{
 								background: url(../img/poster/poster-sprite.png) -127px 10px no-repeat,-o-linear-gradient(top, $white-bg 0%,$grey-btn-grad2 100%); /* Opera 11.10+ */
 								background: url(../img/poster/poster-sprite.png) -127px 10px no-repeat,-ms-linear-gradient(top, $white-bg 0%,$grey-btn-grad2 100%); /* IE10+ */
 								background: url(../img/poster/poster-sprite.png) -127px 10px no-repeat,linear-gradient(to bottom, $white-bg 0%,$grey-btn-grad2 100%); /* W3C */
-								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$white-bg', endColorstr='$grey-btn-grad2',GradientType=0 ); /* IE6-9 */
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
 								&.active{
 									background:url(../img/poster/poster-sprite.png) -151px 10px no-repeat, $black-grey-btn-bg;
 									box-shadow: inset 0 0 5px rgba(0,0,0,.4);
@@ -682,7 +792,8 @@ body{
 								}
 							}
 							&.more-copy{
-								border-radius: 0 2px 2px 0;
+								border-radius: 0 3px 3px 0;
+								behavior: url(PIE/PIE.htc);
 								margin-left: -1px;
 								background: url(../img/poster/poster-sprite.png) -127px -16px no-repeat, $white-bg; /* Old browsers */
 								background: url(../img/poster/poster-sprite.png) -127px -16px no-repeat,-moz-linear-gradient(top, $white-bg 0%, $grey-btn-grad2 100%); /* FF3.6+ */
@@ -691,7 +802,7 @@ body{
 								background: url(../img/poster/poster-sprite.png) -127px -16px no-repeat,-o-linear-gradient(top, $white-bg 0%,$grey-btn-grad2 100%); /* Opera 11.10+ */
 								background: url(../img/poster/poster-sprite.png) -127px -16px no-repeat,-ms-linear-gradient(top, $white-bg 0%,$grey-btn-grad2 100%); /* IE10+ */
 								background: url(../img/poster/poster-sprite.png) -127px -16px no-repeat,linear-gradient(to bottom, $white-bg 0%,$grey-btn-grad2 100%); /* W3C */
-								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$white-bg', endColorstr='$grey-btn-grad2',GradientType=0 ); /* IE6-9 */
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
 								&.active{
 									background:url(../img/poster/poster-sprite.png) -153px -16px no-repeat, $black-grey-btn-bg;
 									box-shadow: inset 0 0 5px rgba(0,0,0,.4);
@@ -704,71 +815,115 @@ body{
 						}
 					}
 				}
+			}
+			.comment-block{
+				@media only screen and (max-width: 660px) {
+					width: 96%;
+					margin: 0 2%;
+					-webkit-box-shadow: 0 0 11px 2px #ffb836;
+					box-shadow: 0 0 11px 2px #ffb836;
+				}
 				.center-poster{
 					position: relative;
+					padding: 0 4%;
+					width: 92%;
+					@media only screen and (max-width: 660px) {
+						padding: 0;
+						width: 100%;
+					}
 					&:hover{
 						.poster-action{
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 170px;
-							@include box-sizing(border-box);
-							padding-top: 30px;
-							z-index: 100;
-							background: -moz-linear-gradient(top,  rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.45)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-							background: -webkit-linear-gradient(top,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-							background: -o-linear-gradient(top,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-							background: -ms-linear-gradient(top,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-							background: linear-gradient(to bottom,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%); /* W3C */
-							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-							ul{
-								text-align: center;
-								li{
-									display: inline-block;
-									margin-right: 13px;
-									&:last-child{margin-right: 0;}
-									a{
-										display: block;
-										width: 73px;
-										height: 73px;
-										background-image: url(../img/poster/poster-icon-sprite.png);
-										background-repeat: no-repeat;
-										opacity: .7;
-										&.lk{background-position: -1px 0;}
-										&.st{background-position: -74px 0;}
-										&.bs{background-position: -147px 0;}
-										&:hover{
-											opacity: 1;
-										}
+							opacity: 1;
+							transition: opacity .5s;
+						}
+					}
+					.yellow-like,
+					.red-star{display: none;}
+					@media only screen and (max-width: 660px) {
+						.yellow-like,
+						.red-star{display: block;}
+					}
+					.poster-action{
+						opacity: 0;
+						position: absolute;
+						top: 0;
+						left: 4%;
+						width: 92%;
+						height: 170px;
+						@include box-sizing(border-box);
+						padding-top: 30px;
+						z-index: 95;
+						background: -moz-linear-gradient(top,  rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.45)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+						@media only screen and (max-width: 660px) {display: none;}
+						ul{
+							text-align: center;
+							li{
+								display: inline-block;
+								margin-right: 13px;
+								&:last-child{margin-right: 0;}
+								a{
+									display: block;
+									width: 73px;
+									height: 73px;
+									background-image: url(../img/poster/poster-icon-sprite.png);
+									background-repeat: no-repeat;
+									opacity: .7;
+									&.lk{
+										background-position: -1px 0;
+										&.pa-active{background-position: -1px -73px;opacity: 1;}
+									}
+									&.st{
+										background-position: -74px 0;
+										&.pa-active{background-position: -74px -73px;opacity: 1;}
+									}
+									&.bs{background-position: -147px 0;}
+									&:hover{
+										opacity: 1;
 									}
 								}
 							}
 						}
+						@media only screen and (max-width: 905px) {
+							opacity: 1;
+						}
 					}
-					img{}
+					img{width: 100%;}
 				}
-				img{}
 				.member-about{
-					padding-top: 20px;
+					padding: 20px 4% 30px;
 					position: relative;
+					@media only screen and (max-width: 660px) {
+						padding-right: 15px;
+						padding-left: 15px;
+						padding-bottom: 20px;
+						background:$white-bg;
+					}
 					.content-avatar{
 						position: absolute;
-						right: 21px;
+						right: 47px;
 						top: -35px;
 						display: block;
 						width: 85px;
 						height: 85px;
 						border: 5px solid $white-bg;
 						border-radius: 50%;
+						behavior: url(PIE/PIE.htc);
 						margin-bottom: 15px;
 						&:hover{
-							-webkit-box-shadow: 2px 4px 10px rgba(0,0,0,.3);
-							box-shadow: 2px 4px 10px rgba(0,0,0,.3);
+							@media only screen and (min-width: 1000px) {
+								-webkit-box-shadow: 2px 4px 10px rgba(0,0,0,.3);
+								box-shadow: 2px 4px 10px rgba(0,0,0,.3);
+							}
 						}
 						img{
 							border-radius: 50%;
+							behavior: url(PIE/PIE.htc);
 						}
 					}
 					p{
@@ -785,18 +940,85 @@ body{
 								&.memb-name{
 									font-size: .93rem;
 									color: $light-red;
+									&:hover{
+										@media only screen and (max-width: 1000px) {
+											text-decoration: none;
+										}
+									}
 								}
 							}
 						}
 					}
 				}
-			}
-			.comment-block{
-				background:$keep-wrap-grad;
-				-webkit-box-shadow: inset 0 1px 2px $poster-product-shadow;
-				box-shadow: inset 0 1px 2px $poster-product-shadow;
+				.mob-buttons{
+					text-align: center;
+					padding: 15px;
+					border-top:1px solid $mob-poster-divider;
+					box-shadow: 0 2px 3px rgba(0,0,0,.2);
+					-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.2);
+					background:$white-bg;
+					button{
+						width: 47%;
+						text-align: left;
+						position: relative;
+						border-radius: 4px;
+						behavior: url(PIE/PIE.htc);
+						@include box-sizing(border-box);
+						margin-right: 12px;
+						-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.1), inset 0 1px 0 rgba(255,255,255,.3);
+						box-shadow: 0 2px 3px rgba(0,0,0,.1), inset 0 1px 0 rgba(255,255,255,.3);
+						border:1px solid transparent;
+						padding: 10px 0 10px 13px;
+						font-family: $font-stack1;
+						font-size: 1.14rem;
+						span{
+							position: absolute;
+							width: 15px;
+							height: 15px;
+							right: 15px;
+							top: 50%;
+							margin-top: -7px;
+							background-image: url("../img/poster/poster-sprite.png");
+							background-repeat: no-repeat;
+						}
+					}
+					.mob-like{
+						color: $yellow-btn-txt;
+						text-shadow:0 1px 0 $yellow-txt-shadow;
+						border-color:$yellow-btn-border;
+						background: $yellow-btn-grad1; /* Old browsers */
+						background:-moz-linear-gradient(left,  rgba(241,218,54,0) 0%, rgba(253,237,150,1) 51%, rgba(241,218,54,0) 100%), -moz-linear-gradient(top, $yellow-btn-grad1 0%, $yellow-btn-grad2 100%); /* FF3.6+ */
+						background:-webkit-gradient(linear, left top, right top, color-stop(0%,rgba(241,218,54,0)), color-stop(51%,rgba(253,237,150,1)), color-stop(100%,rgba(241,218,54,0))), -webkit-gradient(linear, left top, left bottom, color-stop(0%,$yellow-btn-grad1), color-stop(100%,$yellow-btn-grad2)); /* Chrome,Safari4+ */
+						background:-webkit-linear-gradient(left,  rgba(241,218,54,0) 0%,rgba(253,237,150,1) 51%,rgba(241,218,54,0) 100%), -webkit-linear-gradient(top, $yellow-btn-grad1 0%,$yellow-btn-grad2 100%); /* Chrome10+,Safari5.1+ */
+						background:-o-linear-gradient(left,  rgba(241,218,54,0) 0%,rgba(253,237,150,1) 51%,rgba(241,218,54,0) 100%), -o-linear-gradient(top, $yellow-btn-grad1 0%,$yellow-btn-grad2 100%); /* Opera 11.10+ */
+						background:-ms-linear-gradient(left,  rgba(241,218,54,0) 0%,rgba(253,237,150,1) 51%,rgba(241,218,54,0) 100%), -ms-linear-gradient(top, $yellow-btn-grad1 0%,$yellow-btn-grad2 100%); /* IE10+ */
+						background:linear-gradient(to right,  rgba(241,218,54,0) 0%,rgba(253,237,150,1) 51%,rgba(241,218,54,0) 100%), linear-gradient(to bottom, $yellow-btn-grad1 0%,$yellow-btn-grad2 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe96c', endColorstr='#e9a044',GradientType=0 ); /* IE6-9 */
+						span{background-position: -274px 0;}
+					}
+					.mob-favorite{
+						margin-right: 0;
+						color: $white-text;
+						text-shadow:0 -1px 0 $red-shadow;
+						border-color:$red-btn-grad1;
+						background: $red-btn-grad1; /* Old browsers */
+						background: -moz-linear-gradient(top, $red-btn-grad1 0%, $red-bg 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$red-btn-grad1), color-stop(100%,$red-bg)); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top, $red-btn-grad1 0%,$red-bg 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top, $red-btn-grad1 0%,$red-bg 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top, $red-btn-grad1 0%,$red-bg 100%); /* IE10+ */
+						background: linear-gradient(to bottom, $red-btn-grad1 0%,$red-bg 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf1f00', endColorstr='#cf2200',GradientType=0 ); /* IE6-9 */
+						span{background-position: -248px -35px;}
+					}
+				}
+
+
 				.icon-layer{
 					padding: 20px 30px;
+					-webkit-box-shadow: inset 0 1px 2px $poster-product-shadow;
+					box-shadow: inset 0 1px 2px $poster-product-shadow;
+					background:$keep-wrap-grad;
 					li{
 						display: inline-block;
 						margin-right: 15px;
@@ -807,21 +1029,59 @@ body{
 							width: 15px;
 							height: 15px;
 							&:hover{
-								color: $light-red;
 								text-decoration: none;
+								@media only screen and (min-width: 1000px) {
+									color: $light-red;
+								}
 							}
-							&.like-icon{background:url(../img/poster/poster-sprite.png) -245px 1px no-repeat;}
-							&.star-icon{background:url(../img/poster/poster-sprite.png) -245px -15px no-repeat;}
-							&.comment-icon{background:url(../img/poster/poster-sprite.png) -245px -32px no-repeat;}
+							&.like-icon{background:url(../img/poster/poster-sprite.png) -275px 1px no-repeat;}
+							&.star-icon{background:url(../img/poster/poster-sprite.png) -275px -15px no-repeat;}
+							&.comment-icon{background:url(../img/poster/poster-sprite.png) -275px -32px no-repeat;}
+						}
+					}
+				}
+				.mobile-comment{
+					font-family: $font-stack1;
+					color: $light-red;
+					padding: 25px;
+					border-top:1px solid $mob-poster-divider;
+					position: relative;
+					background:$keep-wrap-grad;
+					@media only screen and (min-width: 660px) {display: none;}
+					&:after{
+						content: "+";
+						font-size: 1.2rem;
+						position: absolute;
+						right: 25px;
+						top: 24px;
+					}
+					&.current{
+						&:after{
+							content: "-";
+						}
+					}
+					span{
+						&.com-count{
+							color: $very-light-grey;
 						}
 					}
 				}
 				.comment-txt{
+					background:$keep-wrap-grad;
+					&.mobile-comment-wrap{
+						@media only screen and (max-width: 660px) {display: none;}
+					}
 					li{
 						display: block;
 						clear: both;
 						padding: 15px 85px 20px 30px;
 						border-top:1px solid $mob-poster-divider;
+						@media only screen and (max-width:660px){
+							padding-right: 50px;
+							&:first-child{
+								border:0;
+							}
+						}
 						.img-wrap{
 							display: block;
 							float: left;
@@ -829,10 +1089,13 @@ body{
 							z-index: 500;
 							&:hover{
 								img{
-									box-shadow: 0 2px 5px rgba(0,0,0,.3);
+									@media only screen and (min-width: 1000px) {
+										box-shadow: 0 2px 5px rgba(0,0,0,.3);
+										-webkit-box-shadow: 0 2px 5px rgba(0,0,0,.3);
+									}
 								}
 							}
-							img{border-radius: 50%;}
+							img{border-radius: 50%;behavior: url(PIE/PIE.htc);}
 						}
 						.txt-wrap{
 							padding-left: 53px;
@@ -845,6 +1108,9 @@ body{
 								right: -49px;
 								top:11px;
 								background:url(../img/poster/poster-sprite.png) -192px 0px no-repeat;
+								@media only screen and (max-width:660px){
+									right: -25px;
+								}
 								&:hover{
 									cursor: pointer;
 									background:url(../img/poster/poster-sprite.png) -192px -10px no-repeat;
@@ -857,6 +1123,7 @@ body{
 									min-width: 130px;
 									@include box-sizing(border-box);
 									border-radius: 2px;
+									behavior: url(PIE/PIE.htc);
 									background:$white-bg;
 									position: absolute;
 									bottom: 15px;
@@ -874,6 +1141,9 @@ body{
 								line-height: 1.5;
 								.com-name{
 									color: $light-red;
+									@media only screen and (max-width: 1000px) {
+										text-decoration: none;
+									}
 								}
 								&.com-date{
 									font-size: .71rem;
@@ -890,6 +1160,7 @@ body{
 									box-shadow: inset 0 1px 4px rgba(0,0,0,.2), 1px 1px 0 $white-bg;
 									-webkit-box-shadow: inset 0 1px 4px rgba(0,0,0,.2), 1px 1px 0 $white-bg;
 									border-radius: 2px;
+									// behavior: url(PIE/PIE.htc);
 									background:$white-bg;
 									min-width: 100%;
 									max-width: 100%;

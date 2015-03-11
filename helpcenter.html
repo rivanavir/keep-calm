@@ -4,8 +4,27 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Help Centre</title>
+	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
 	<link rel="stylesheet" href="css/helpcenter.css">
-	<!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="css/ie8.css">
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script>
+	  document.createElement('header');
+	  document.createElement('section');
+	  document.createElement('article');
+	  document.createElement('aside');
+	  document.createElement('nav');
+	  document.createElement('footer');
+	</script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+	<![endif]-->
 </head>
 <body>
 	<div id="back-top">
@@ -14,35 +33,216 @@
 	</div>
 	<section class="mobile-wrap">
 		<header>
+			<div class="head-top">
+				<span class="head-close">&#215;</span>
+				<p>We deliver your gift by <b>Christmas Eve</b>, if you order before the 13th of december!</p>
+				</div>
 			<div class="wrapper">
-				<h1 class="logo"><a href="#"></a></h1>
+				<h1 class="logo"><a href="#">&nbsp;</a></h1>
+				<a href="#" class="logo-txt">The keep calm-o-matic</a>
 				<div class="head-left">
-					<a href="#" class="menu-button"></a>
-					<div class="search-form">
-						<input type="text" placeholder="Search">
-						<a href="#" class="search-button"></a>
+					<div class="mob-hidden">
+						<a href="#" class="create">Create<span></span></a>
+						<a href="#" class="discover">Discover<span></span></a>
+					</div>
+					<div class="mob-visible">
+						<div class="search-click" id="mob-search-but"></div>
+						<span class="menu-button" id="mob-menu-button"></span>
+						<ul class="menu-list">
+							<li><a href="#">Terms And Conditions</a></li>
+							<li><a href="#">Help Centre</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">The History of Keep Calm</a></li>
+						</ul>
 					</div>
 				</div>
-				<ul class="head-right">
-					<li class="avatar">
-						<img src="img/avatar.jpg">
-						<p>Gabriel</p>
-					</li>
-					<li class="bell"><a href="#"><span>2</span></a></li>
-					<li class="trash"><a href="#"></a></li>
-				</ul>
+				<div class="head-right">
+					<div class="mob-hidden menu-button" id="menu-button">
+						<ul class="menu-list">
+							<li><a href="#">Terms And Conditions</a></li>
+							<li><a href="#">Help Centre</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">The History of Keep Calm</a></li>
+						</ul>
+					</div>
+					<ul class="profile-block"><!--add class "join-in"-->
+						<li class="join-in-label">Join in</li>
+						<li class="log-in avatar" id="profile-mob"><!-- add class "mob-message" and remove class "log-in"-->
+							<a href="#" class="logged-in"></a>
+							<img alt="" src="img/avatar.jpg">
+							<span class="msg-count">2</span>
+							<p>Gabriel</p>
+							<ul class="profile-list">
+								<li><a href="#">My profile</a></li>
+								<li><a href="#">My Feed</a></li>
+								<li><a href="#">Settings</a></li>
+								<li><a href="#">Log out</a></li>
+							</ul>
+						</li>
+						<li class="mob-hidden notif">
+							<span id="notif-button"><span class="count">2</span></span>
+							<div id="notif-list-wrap">
+								<p class="title">Notifications</p>
+								<ul id="notif-list" class="scroll-wrapper">
+									<li class="new-notif wrap-close">
+										<ul class="some-action">
+											<li class="not-read">
+												<a href="#">&#176;</a>
+											</li>
+											<li class="not-close">
+												<a href="#">&#215;</a>
+											</li>
+										</ul>
+										<img alt="" src="img/poster/notification/not-img1.jpg">
+										<p class="not-txt"><span>AidanF</span> and <span>Benjamin</span> liked  your poster</p>
+										<p class="not-date">1 sec ago</p>
+									</li>
+									<li class="wrap-close">
+										<ul class="some-action">
+											<li class="not-read">
+												<a href="#">&#176;</a>
+											</li>
+											<li class="not-close">
+												<a href="#">&#215;</a>
+											</li>
+										</ul>
+										<img alt="" src="img/poster/notification/not-img2.jpg">
+										<p class="not-txt"><span>GabrielT</span> favourited your poster</p>
+										<p class="not-date">2 weeks ago</p>
+									</li>
+									<li class="new-notif wrap-close">
+										<ul class="some-action">
+											<li class="not-read">
+												<a href="#">&#176;</a>
+											</li>
+											<li class="not-close">
+												<a href="#">&#215;</a>
+											</li>
+										</ul>
+										<img alt="" src="img/poster/notification/not-img3.jpg">
+										<p class="not-txt"><span>Someone</span> liked your poster</p>
+										<p class="not-date">12 weeks ago</p>
+									</li>
+									<li  class="wrap-close">
+										<ul class="some-action">
+											<li class="not-read">
+												<a href="#">&#176;</a>
+											</li>
+											<li class="not-close">
+												<a href="#">&#215;</a>
+											</li>
+										</ul>
+										<img alt="" src="img/poster/notification/not-img2.jpg">
+										<p class="not-txt"><span>GabrielT</span> favourited your poster</p>
+										<p class="not-date">2 weeks ago</p>
+									</li>
+									<li class="new-notif wrap-close">
+										<ul class="some-action">
+											<li class="not-read">
+												<a href="#">&#176;</a>
+											</li>
+											<li class="not-close">
+												<a href="#">&#215;</a>
+											</li>
+										</ul>
+										<img alt="" src="img/poster/notification/not-img3.jpg">
+										<p class="not-txt"><span>Someone</span> liked your poster</p>
+										<p class="not-date">12 weeks ago</p>
+									</li>
+									<li class="wrap-close">
+										<ul class="some-action">
+											<li class="not-read">
+												<a href="#">&#176;</a>
+											</li>
+											<li class="not-close">
+												<a href="#">&#215;</a>
+											</li>
+										</ul>
+										<img alt="" src="img/poster/notification/not-img2.jpg">
+										<p class="not-txt"><span>GabrielT</span> favourited your poster</p>
+										<p class="not-date">2 weeks ago</p>
+									</li>
+									<li class="new-notif wrap-close">
+										<ul class="some-action">
+											<li class="not-read">
+												<a href="#">&#176;</a>
+											</li>
+											<li class="not-close">
+												<a href="#">&#215;</a>
+											</li>
+										</ul>
+										<img alt="" src="img/poster/notification/not-img3.jpg">
+										<p class="not-txt"><span>Someone</span> liked your poster</p>
+										<p class="not-date">12 weeks ago</p>
+									</li>
+									<li class="wrap-close">
+										<ul class="some-action">
+											<li class="not-read">
+												<a href="#">&#176;</a>
+											</li>
+											<li class="not-close">
+												<a href="#">&#215;</a>
+											</li>
+										</ul>
+										<img alt="" src="img/poster/notification/not-img1.jpg">
+										<p class="not-txt"><span>AidanF</span>, <span>Benjamin</span> and <span>LiviaS</span> liked your poster</p>
+										<p class="not-date">a long time ago</p>
+									</li>
+									<li class="new-notif wrap-close">
+										<ul class="some-action">
+											<li class="not-read">
+												<a href="#">&#176;</a>
+											</li>
+											<li class="not-close">
+												<a href="#">&#215;</a>
+											</li>
+										</ul>
+										<img alt="" src="img/poster/notification/not-img1.jpg">
+										<p class="not-txt"><span>AidanF</span>, <span>Benjamin</span> and <span>LiviaS</span> liked your poster</p>
+										<p class="not-date">a long time ago</p>
+									</li>
+									<li>
+										<img alt="" src="img/poster/notification/not-img4.jpg">
+										<p class="not-txt"><span>Benjamin</span> is now following you</p>
+										<p class="not-date">a long time ago</p>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="trash"><a href="#"><span class="trash-count">5</span></a></li>
+					</ul>
+					<div class="mob-hidden search-click" id="tab-search-but"></div>
+					<div class="mob-hidden search-wrap">
+						<div class="search-form" id="poster-sf"><!--add class "focused"-->
+							<input type="text" id="search-poster" placeholder="Search here">
+							<a href="#" class="search-button"></a>
+							<span class="input-close">&#215;</span>
+						</div>
+						<div class="top-hit" id="top-hit">
+							<p class="title">Top hits</p>
+							<ul class="hit-img">
+								<li><img alt="" src="img/poster/top-hits/hit-img1.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img2.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img3.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img4.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img5.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img6.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img7.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img8.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img9.jpg"></li>
+							</ul>
+							<a href="#" class="view-all">View all results</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="mob-visible">
-				<h1 class="logo"><a href="#"></a></h1>
-				<div class="mob-head-left">
-					<a href="#" class="menu-button"></a>
-					<a class="search-button-down"></a>
-					<div class="search-form" style="display:none;">
-						<input type="text" placeholder="Search">
-						<a href="#" class="search-button"></a>
-					</div>
-				</div>
-				<a href="#" class="mob-create">Create</a>
+			<div class="mob-search-form">
+				<input type="text" id="mob-search" placeholder="Search here">
+				<span class="input-close">&#215;</span>
+			</div>
+			<div class="mob-visible cr-disk-wrap">
+				<a href="#" class="create">Create<span></span></a>
+				<a href="#" class="discover">Discover<span></span></a>
 			</div>
 		</header>
 		<div class="head-ban">
@@ -50,36 +250,36 @@
 		</div>
 		<section class="wrapper">
 			<div class="sidebar">
-				<div href="#" class="side-panel layer1">
-					<span class="side-mark"><img src="img/Icons/Inner/popular_topics.png"></span>
+				<div class="side-panel layer1">
+					<span class="side-mark"><img alt="" src="img/Icons/Inner/popular_topics.png"></span>
 					<p class="title">Popular Topics</p>
 					<ul class="popular-link">
-						<li><a href="#quest1" data-current-tab="topic4">I have a question about purchasing a product</li></a>
-						<li><a href="#quest2" data-current-tab="topic1">I have a question about delivery</li></a>
-						<li><a href="#quest3" data-current-tab="topic1">I have a question about my order</li></a>
+						<li><a href="#quest1" data-current-tab="topic4">I have a question about purchasing a product</a></li>
+						<li><a href="#quest2" data-current-tab="topic1">I have a question about delivery</a></li>
+						<li><a href="#quest3" data-current-tab="topic1">I have a question about my order</a></li>
 						<li><a href="#quest4" data-current-tab="topic4">I want to tell you about an advertising or business opportunity!</a></li>
 					</ul>
 				</div>
 				<a href="#" class="side-panel layer2">
-					<span class="side-mark"><img src="img/Icons/Inner/heritage.png"></span>
+					<span class="side-mark"><img alt="" src="img/Icons/Inner/heritage.png"></span>
 					<p class="title">The Keep Calm heritage</p>
 					<p>Read through the Keep Calm guide</p>
 				</a>
 				<a href="#" class="side-panel layer3">
-					<span class="side-mark"><img src="img/Icons/Inner/video.png"></span>
+					<span class="side-mark"><img alt="" src="img/Icons/Inner/video.png"></span>
 					<p class="title">How to use our website</p>
 					<p>Watch our 3 minutes instructions video</p>
 				</a>
 			</div>
 			<div class="content">
 				<div class="topics">
-					<div href="#" class="side-panel layer1 mob-visible">
-						<span class="side-mark"><img src="img/Icons/Inner/popular_topics.png"></span>
+					<div class="side-panel layer1 mob-visible">
+						<span class="side-mark"><img alt="" src="img/Icons/Inner/popular_topics.png"></span>
 						<p class="title">Popular Topics</p>
 						<ul class="popular-link">
-							<li><a href="#quest1" data-current-tab="topic4">I have a question about purchasing a product</li></a>
-							<li><a href="#quest2" data-current-tab="topic1">I have a question about delivery</li></a>
-							<li><a href="#quest3" data-current-tab="topic1">I have a question about my order</li></a>
+							<li><a href="#quest1" data-current-tab="topic4">I have a question about purchasing a product</a></li>
+							<li><a href="#quest2" data-current-tab="topic1">I have a question about delivery</a></li>
+							<li><a href="#quest3" data-current-tab="topic1">I have a question about my order</a></li>
 							<li><a href="#quest4" data-current-tab="topic4">I want to tell you about an advertising or business opportunity!</a></li>
 						</ul>
 					</div>
@@ -87,37 +287,37 @@
 					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
 					<ul class="content-poster topic-click">
 						<li data-click="topic1">
-							<img src="img/Icons/Inner1/shipping_small.png">
+							<img alt="" src="img/Icons/Inner1/shipping_small.png">
 							<p class="title">Shipping and returns</p>
 							<p>This is Photoshop's version  of Lorem Ipsum.</p>
 							<p>Proin gravida nibh vel velit</p>
 						</li>
 						<li data-click="topic2">
-							<img src="img/Icons/Inner1/delete_small.png">
+							<img alt="" src="img/Icons/Inner1/delete_small.png">
 							<p class="title">I need help deleting a poster</p>
 							<p>This is Photoshop's version  of Lorem Ipsum.</p>
 							<p>Proin gravida nibh vel velit</p>
 						</li>
 						<li data-click="topic3">
-							<img src="img/Icons/Inner1/create_small.png">
+							<img alt="" src="img/Icons/Inner1/create_small.png">
 							<p class="title">I need help creating a poster</p>
 							<p>This is Photoshop's version  of Lorem Ipsum.</p>
 							<p>Proin gravida nibh vel velit</p>
 						</li>
 						<li data-click="topic4">
-							<img src="img/Icons/Inner1/general_info_small.png">
+							<img alt="" src="img/Icons/Inner1/general_info_small.png">
 							<p class="title">General Information</p>
 							<p>This is Photoshop's version  of Lorem Ipsum.</p>
 							<p>Proin gravida nibh vel velit</p>
 						</li>
 					</ul>
 					<a href="#" class="side-panel layer2 mob-visible">
-						<span class="side-mark"><img src="img/Icons/Inner/heritage.png"></span>
+						<span class="side-mark"><img alt="" src="img/Icons/Inner/heritage.png"></span>
 						<p class="title">The Keep Calm heritage</p>
 						<p>Read through the Keep Calm guide</p>
 					</a>
 					<a href="#" class="side-panel layer3 mob-visible">
-						<span class="side-mark"><img src="img/Icons/Inner/video.png"></span>
+						<span class="side-mark"><img alt="" src="img/Icons/Inner/video.png"></span>
 						<p class="title">How to use our website</p>
 						<p>Watch our 3 minutes instructions video</p>
 					</a>
@@ -125,7 +325,7 @@
 				<div class="topics-open">
 					<ul class="content-poster tabs-menu">
 						<li class="topic1">
-							<a class="post1" href="#tab1">Shipping & returns</a>
+							<a class="post1" href="#tab1">Oreders information</a>
 						</li>
 						<li class="topic2">
 							<a class="post2" href="#tab2">Delete a poster</a>
@@ -141,7 +341,7 @@
 					<div class="tabs">
 						<div id="tab1" class="tab-content">
 							<div class="accordion">
-								<h3 class="section" id="quest2">When do i get my order?<span class="keep-calm-ban ban-image21"></span></h3>
+								<h3 class="section" id="quest2">What is the delivery time for orders?<span class="keep-calm-ban ban-image29"></span></h3>
 								<div class="pane">
 									<p class="title">For standard orders, please allow up to:</p>
 									<ul class="order-list">
@@ -160,14 +360,8 @@
 										<li>6 working days from date despatched for delivery to other countries (for some countries tracking may not apply, please check before placing your order).</li>
 									</ul>
 								</div>
-								<h3 class="section" id="quest3">My order is late!<span class="keep-calm-ban ban-image23"></span></h3>
+								<h3 class="section">Will my gift arrive before Christmas?<span class="keep-calm-ban ban-image30"></span></h3>
 								<div class="pane">
-									<p>Keep calm, we’ll have your order by the time you say ‘governmental accountability’! We send our items via Royal Mail AirSure and follow their standard delivery times, but occasional delays may occur.</p>
-									<p> If your order is not received by the due delivery date, we replace the item free of charge. You can contact our friendly helpdesk team to let them know your order is late  at <a href="mailto:help@keepcalm-o-matic.co.uk">(help@keepcalm-o-matic.co.uk)</a></p>
-								</div>
-								<h3 class="section">What is my tracking number?<span class="keep-calm-ban ban-image25"></span></h3>
-								<div class="pane">
-									<p>Tracking numbers will be supplied on request for users who have selected the ‘trackable’ order option when purchasing. Contact our support team for more info <a href="mailto:help@keepcalm-o-matic.co.uk">(help@keepcalm-o-matic.co.uk)</a></p>
 									<p class="title">How to make sure your gift arrives on time:</p>
 									<p>We know it’s important to you that gift arrive on time for the special events in your life, be it birthday, Christmas time or Easter season.</p>
 									<p>We can guarantee delivery of your gift before Christmas this year if you <b>place your order:</b></p>
@@ -177,10 +371,20 @@
 										<li>Before the 12th of December for USA or rest of the world deliveries</li>
 									</ul>
 								</div>
-								<h3 class="section">Can i change the custom design on my order?<span class="keep-calm-ban ban-image27"></span></h3>
+								<h3 class="section" id="quest3">My order is late!<span class="keep-calm-ban ban-image23"></span></h3>
 								<div class="pane">
-									<p>The shade of blue isn’t quite right? If you absolutely must change the design on your custom item, please get in touch with our support team. If you email us the next working day of placing your order, we might be able to help, contact our friendly customer support team at <a href="mailto:help@keepcalm-o-matic.co.uk">help@keepcalm-o-matic.co.uk</a></p>
-									<p>Please make sure the image is a proper resolution for printing before placing your order (an image of at least 2000x2000 pixels is reccommended). To note if the image looks bad on your computer screen (looks pixelated or has missing details), there’s a high chance it will look bad when printing.</p>
+									<p>Keep calm, we’ll have your order by the time you say ‘governmental accountability’! We send our items via Royal Mail AirSure and follow their standard delivery times, but occasional delays may occur.</p>
+									<p> If your order is not received by the due delivery date, we replace the item free of charge. You can contact our friendly helpdesk team to let them know your order is late  at <a href="mailto:help@keepcalm-o-matic.co.uk">(help@keepcalm-o-matic.co.uk)</a></p>
+								</div>
+								<h3 class="section">What is my tracking number?</h3>
+								<div class="pane">
+									<p>Tracking numbers will be supplied on request for users who have selected the 'trackable' order option when purchasing. Contact our support team for more info at <a href="mailto:help@keepcalm-o-matic.co.uk">help@keepcalm-o-matic.co.uk</a></p>
+								</div>
+								<h3 class="section">Can i change the custom design on my order?<span class="keep-calm-ban ban-image31"></span></h3>
+								<div class="pane">
+									<p>The shade of blue isn’t quite right? If you want to change the design on your item, please get in touch with our support team. If you email us the next working day of placing your order, we will certainly help!</p>
+									<p>Contact us at <a href="mailto:help@keepcalm-o-matic.co.uk">help@keepcalm-o-matic.co.uk</a></p>
+									<p>Please make sure the image is a proper resolution for printing before placing your order (see the section on 'How to print'). Note that if the image doesn't look good on your computer screen (pixelated or has missing details), there’s a high chance the printed image will be the same.</p>
 								</div>
 								<h3 class="section">I made a mistake on my delivery address<span class="keep-calm-ban ban-image12"></span></h3>
 								<div class="pane">
@@ -241,15 +445,18 @@
 						</div>
 						<div id="tab2" class="tab-content">
 							<div class="accordion">
-								<h3 class="section">How do i remove an image?<span class="keep-calm-ban ban-image16"></span></h3>
+								<h3 class="section">How do i remove/delete an image from the website?<span class="keep-calm-ban ban-image32"></span></h3>
 								<div class="pane">
-									<p><b>To remove an image from our website</b>, you can:</p>
+									<p><b>To remove an image from our website</b>, you can report yhe inappropriate poster using the 'report' button on each poster page - our staff will review your request and take the image down if needed. Always be sure to include the reason you are flagging the image.</p>
+									<p>All the images uploaded on our website need to comply with our <a href="#">content policy</a>, be sure to read it before creating a poster. You should always use the report option if you see a poster in the categories below:</p>
 									<ul class="simple-list">
-										<li>Report the poster using the ‘report’ feature on the poster page – our staff will review your request and take the image down if needed</li>
-										<li>Contact our friendly customer support team at <a href="mailto:help@keepcalm-o-matic.co.uk">help@keepcalm-o-matic.co.uk</a></li>
+										<li>Highly inappropriate and offensive content, images or text</li>
+										<li>Contains messages that incite hate or violence</li>
+										<li>Contains racial, ethnic or sexist slurs</li>
+										<li>Is used for bullying or harassing someone</li>
 									</ul>
 								</div>
-								<h3 class="section">How do i create a private poster?<span class="keep-calm-ban ban-image28"></span></h3>
+								<h3 class="section">How do i create a private poster?<span class="keep-calm-ban ban-image33"></span></h3>
 								<div class="pane">
 									<p>Public posters can be created by anyone who visits our website. They are, just as the name states, public: they will be shown to everyone who explores our Gallery of images, and anyone can find them easily on a Google search</p>
 									<p><b>To create a private poster</b>, just:</p>
@@ -260,24 +467,16 @@
 									</ul>
 									<p>Private posters will not be seen by anyone but the author of the poster (visible in the account page) and the users who have the link to the poster.</p>
 								</div>
-								<h3 class="section">This poster is offensive/i'm being bullied<span class="keep-calm-ban ban-image17"></span></h3>
+								<h3 class="section">My trandemark is being used without permission!<span class="keep-calm-ban ban-image34"></span></h3>
 								<div class="pane">
-									<p>You can find a button to report a poster on every poster page on our website.</p>
-									<p>Reported posters are reviewed by our staff and removed if they don’t comply with our <a href="http://www.keepcalm-o-matic.co.uk/privacy/">content policy</a>.</p>
-									<p>You should always use the report option if you see a poster in the categories below:</p>
-									<ul class="simple-list">
-										<li>Highly inappropriate and offensive content, images or text</li>
-										<li>Contains messages that incite hate or violence</li>
-										<li>Contains racial, ethnic or sexist slurs</li>
-										<li>Is used for bullying or harassing someone</li>
-									</ul>
-									<p>We are NOT OK with bullying or any messages that incite violence and will investigate any reports concerning activities of illegal nature.</p>
+									<p>If you see an image on our website that you believe is infringing on copyright or is using your trademark without permission, please report it and add your reason for report. Our staff reviews these requests daily and remove images if needed.</p>
+									<p>There are millions of posters created on our website by users, and hundreds are being created every day with our free software. While we do request that they respect our policy and upload only images they own rights to, this does not always happen. We don't actively moderate the website, but rather rely on the system of reporting and our active users to flag up anything that is inappropriate.</p>
 								</div>
 							</div>
 						</div>
 						<div id="tab3" class="tab-content">
 							<div class="accordion">
-								<h3 class="section">How do i create my own poster?<span class="keep-calm-ban ban-image04"></span></h3>
+								<h3 class="section">How do i create my own poster?<span class="keep-calm-ban ban-image35"></span></h3>
 								<div class="pane">
 									<p>Keep Calm classic <a href="http://www.keepcalm-o-matic.co.uk/?engine=keepcalm#create">poster creator</a>:</p>
 									<p>Keep Calm posters can be created by anyone who visits our website! It’s fast, easy, fun and, like the best things in life, it’s absolutely free!</p>
@@ -291,9 +490,9 @@
 									<p>Share your poster with your friends and have them vote up if they like it!</p>
 									<p>Any posters that are public when created on your website will be public (displayed in our Gallery for the whole world to see). To make your poster private, you need to be logged in with your account and tick the ‘private’ box before generating the image.</p>
 								</div>
-								<h3 class="section">How do i make a <a href="http://www.keepcalm-o-matic.co.uk/?engine=meme#create">meme</a>?<span class="keep-calm-ban ban-image09"></span></h3>
+								<h3 class="section">How do I make a meme?<span class="keep-calm-ban ban-image09"></span></h3>
 								<div class="pane">
-									<p>The best recipe for fun is a highly emotional beat or images that show you have a funny bone.</p>
+									<p><a href="http://www.keepcalm-o-matic.co.uk/?engine=meme#create">Memes</a> are a good recipe to go viral. Try to win over your friends with images that have high emotional beat, or show your funny bone wuth a caption on your cutest cat pic.</p>
 									<ol class="simple-numeric-list">
 										<li>Just choose your text for upper caption</li>
 										<li>Choose your text for lower caption</li>
@@ -304,7 +503,7 @@
 						</div>
 						<div id="tab4" class="tab-content">
 							<div class="accordion">
-								<h3 class="section">What is the poster of the day?<span class="keep-calm-ban ban-image18"></h3>
+								<h3 class="section">What is the poster of the day?<span class="keep-calm-ban ban-image18"></span></h3>
 								<div class="pane">
 									<p>Everyone wants to be popular, but only the best of the best can make it to our “Poster of the day” category!</p>
 									<p>Also, have you thought about how you’re going to handle all the pressure of fame and fortune, the camera lights and the endless autograph sessions? Not everybody is cut out for it!</p>
@@ -318,22 +517,18 @@
 									</ul>
 									<p>Generally, hoards of active friends on the site to vote up your posters is a good idea if you want to make it to the top.</p>
 								</div>
-
-								<h3 class="section">What's the best size my image?</h3>
+								<h3 class="section">How do I print my image on a product?<span class="keep-calm-ban ban-image36"></span></h3>
 								<div class="pane">
-									<ul class="sub-list">
-										<li>Uploaded image for our logos need to be 400x400px to make a decent poster</li>
-										<li>Uploaded images used for our poster backgrounds best fit at:
-											<ul class="simple-list">
-												<li>600x700px for the Keep Calm poster generator</li>
-												<li>500x500px for the Meme</li>
-											</ul>
-										</li>
+									<p>We can print your design on products, but for a high quality end result, you should use a high resolution image. To get the most out of your design print, try to upload images with these optimum sizes:</p>
+									<ul class="simple-list">
+										<li>3011x3507 pixels for a small poster or wall decal</li>
+										<li>4251x4960 pixels for a medium poster or wall decal</li>
+										<li>6011x7015 pixels for a large poster or wall decal</li>
+										<li>911x1063 pixels for a mag</li>
+										<li>1086x1086 pixels for a coaster</li>
+										<li>2161x2634 pixels for a mousemat</li>
+										<li>3543x4133 pixels for a T-shirt, hoodie or babygrow</li>
 									</ul>
-								</div>
-								<h3 class="section">How do i print my image on a product?</h3>
-								<div class="pane">
-									<p>We can print your design on products, but for a high quality end result, you should use an image of better resolution (at least 2000x2000 resolution)</p>
 								</div>
 								
 								<h3 class="section" id="quest1">I have a question about a product<span class="keep-calm-ban ban-image19"></span></h3>
@@ -349,11 +544,11 @@
 								<div class="pane">
 									<p>If you have already gone through our ‘shipping and returns’ section and can’t find the answer to your question, you can always contact our customer support team at <a href="mailto:help@keepcalm-o-matic.co.uk">help@keepcalm-o-matic.co.uk</a>.</p>
 								</div>
-								<h3 class="section" id="quest4">I want to tell you about a business or advertising opportunity</h3>
+								<h3 class="section" id="quest4">I want to tell you about a business or advertising opportunity<span class="keep-calm-ban ban-image37"></span></h3>
 								<div class="pane">
 									<p>We are always open to advertising or business opportunities, tell us about it! You can use <a href="mailto:advertising@keepcalm-o-matic.co.uk">advertising@keepcalm-o-matic.co.uk</a> to contact us.</p>
 									<p>Our sites serve more than 6.5 million impressions and more than 2 million unique visitors per month. Through our advertising partners we’ve helped high quality brands such as Universal, Ford, Virgin, Nintendo, Kellogg’s, DSG, TFL and Nationwide promote their products. We can offer:</p>
-									<ul class="arrow-list">
+									<ul class="simple-list">
 										<li>Site banner units on a CPM basis</li>
 										<li>Display advertising</li>
 										<li>Advertorials and sponsored content</li>
@@ -362,7 +557,7 @@
 										<li>Affiliate opportunities for drop-ship customised products</li>
 									</ul>
 								</div>
-								<h3 class="section">I love this site so much! I want to sponsor you!</h3>
+								<h3 class="section">I love this site so much! I want to sponsor you!<span class="keep-calm-ban ban-image38"></span></h3>
 								<div class="pane">
 									<p>Aww, that’s moving, we love you too! You can help us grow and bring the Keep Calm-o-matic experience to the world if you buy some of the <a href="http://www.keepcalm-o-matic.co.uk/shop/">products in our shop</a>.</p>
 									<p>If you have a website or blog, we’d love it if you blogged about us and linked to your favourite poster!</p>
@@ -381,58 +576,78 @@
 		</section>
 	</section>
 	<footer>
-		<div class="bottom-info">
-			<div class="wrapper">
-				<div class="grey-logo"><span></span></div>
+		<div class="wrapper">
+			<ul class="label-list">
+				<li><a class="label-img1" href="#"></a></li>
+				<li><a class="label-img2" href="#"></a></li>
+				<li><a class="label-img3" href="#"></a></li>
+				<li><a class="label-img4" href="#"></a></li>
+			</ul>
+			<div class="info-layer-wrap">
+				<div class="bot-inf-mob"></div>
 				<div class="bottom-info-layer">
 					<p class="title">About</p>
-					<p class="calm-label">The keep calm-o-matic</p>
-					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-					<ul>
-						<li><a href="#">Advertise on this site</a></li>
-						<li><a href="#">Add Us to your site</a></li>
-						<li><a href="#">Contact Us</a></li>
-					</ul>
+					<div class="accord-for-mobile">
+						<nav>
+							<ul class="foot-nav">
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Terms, conditions & Privacy</a></li>
+								<li><a href="#">The History of Keep caim</a></li>
+							</ul>
+						</nav>
+					</div>
 				</div>
-				<div class="bottom-info-layer ">
-					<p class="title">Navigation</p>
-					<nav>
-						<ul class="foot-nav">
-							<li><a href="#">Create your own poster</a></li>
-							<li><a href="#">Browse the gallery</a></li>
-							<li><a href="#">"Keep Calm and Carry On" Shop</a></li>
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Log in</a></li>
+				<div class="bottom-info-layer">
+					<p class="title">Shop</p>
+					<div class="accord-for-mobile">
+						<nav>
+							<ul class="foot-nav">
+								<li><a href="#">Help Centre</a></li>
+								<li><a href="#">View our Products</a></li>
+								<li><a href="#">My account</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="bottom-info-layer">
+					<p class="title">Connect and socialise</p>
+					<div class="accord-for-mobile">
+						<p>Keep calm and get social! Follow us on Twitter, join our Facebook page or subscribe to the RSS feed!</p>
+						<ul class="foot-soc">
+							<li><a class="fb" href="#"></a></li>
+							<li><a class="tw" href="#"></a></li>
+							<li><a class="pb" href="#"></a></li>
+							<li><a class="gp" href="#"></a></li>
 						</ul>
-					</nav>
+					</div>
 				</div>
-				<div class="bottom-info-layer soc">
-					<p class="title">Socialize</p>
-					<p>Keep calm and get social! Follow us on Twitter, join our Facebook page or subscribe to the RSS feed!</p>
+				<div class="bottom-info-layer">
+					<p class="title">Latest Tweets</p>
+					<div class="accord-for-mobile">
+						<div class="tweet-one">
+							<span class="twt"></span>
+							<p class="tweet-mail">@keepcalmomatic<span class="tweet-date">Sep 02</span></p>
+							<p>Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor <a href="#">fb.me/2bjB9Ehh0</a></p>
+						</div>
+					</div>
 				</div>
-				<div class="bottom-info-layer net">
-					<p class="title">Our network</p>
-					<p><a href="#"><img src="img/network-img1.png"></a></p>
-					<p><a href="#"><img src="img/network-img2.png"></a></p>
-					<p><a href="#"><img src="img/network-img3.png"></a></p>
-					<p><a href="#">Video Converter</a></p>
-				</div>
+			</div>
+			<div class="tool-img-wrap">
+				<span class="tool-wrap"></span>
 			</div>
 		</div>
 		<div class="wrapper foot-bot-layer">
-			<ul>
-				<li>Copyright © 2009 - 2014 Reincubate</li>
-				<li>Registered in England and Wales #5189175.</li>
+			<ul class="copyright">
+				<li>Copyright © 2009 - 2014 Keep Calm Network Ltd</li>
+				<li>Registered in England and Wales #9071964..</li>
 				<li>Terms, conditions & privacy</li>
 			</ul>
-			<img src="img/product-foot.png">
+			<ul class="foot-image">
+				<li class="tool-wrap"></li>
+				<li class="foot-lab-img1"></li>
+				<li class="foot-lab-img2"></li>
+			</ul>
 		</div>
-		<ul class="mobile">
-			<li><a class="discover" href="#"><i></i>Discover</a></li>
-			<li><a class="not" href="#"><i><span>2</span></i>Notifications</a></li>
-			<li><a class="basket" href="#"><i></i>Basket</a></li>
-			<li><a class="profile" href="#"><i></i>Profile</a></li>
-		</ul>
 	</footer>
 
 	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>

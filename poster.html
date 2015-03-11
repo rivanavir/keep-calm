@@ -6,7 +6,25 @@
 	<title>Poster</title>
 	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
 	<link rel="stylesheet" href="css/poster.css">
-	<!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="css/ie8.css">
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script>
+	  document.createElement('header');
+	  document.createElement('section');
+	  document.createElement('article');
+	  document.createElement('aside');
+	  document.createElement('nav');
+	  document.createElement('footer');
+	</script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+	<![endif]-->
 </head>
 <body>
 	<div id="popup-wrap">
@@ -17,72 +35,72 @@
 			<div class="scroll-wrapper">
 				<ul class="scroll-block">
 					<li>
-						<img src="img/poster/avatars/avatar6.jpg">
+						<img alt="" src="img/poster/avatars/avatar6.jpg">
 						<p>Anca Alina Adam</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar7.jpg">
+						<img alt="" src="img/poster/avatars/avatar7.jpg">
 						<p>Teodora Conastantinescu</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar8.jpg">
+						<img alt="" src="img/poster/avatars/avatar8.jpg">
 						<p>Gheorghe Bubu Boulescu</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar9.jpg">
+						<img alt="" src="img/poster/avatars/avatar9.jpg">
 						<p>Pusca Colosul</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar10.jpg">
+						<img alt="" src="img/poster/avatars/avatar10.jpg">
 						<p>Ilie Cristian Constantinescu</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar11.jpg">
+						<img alt="" src="img/poster/avatars/avatar11.jpg">
 						<p>Bogdan Danila</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar12.jpg">
+						<img alt="" src="img/poster/avatars/avatar12.jpg">
 						<p>Mihai Eduard Daniel</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar11.jpg">
+						<img alt="" src="img/poster/avatars/avatar11.jpg">
 						<p>Benjamin Goodwin</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar8.jpg">
+						<img alt="" src="img/poster/avatars/avatar8.jpg">
 						<p>Gheorghe Bubu Boulescu</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar9.jpg">
+						<img alt="" src="img/poster/avatars/avatar9.jpg">
 						<p>Pusca Colosul</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar10.jpg">
+						<img alt="" src="img/poster/avatars/avatar10.jpg">
 						<p>Ilie Cristian Constantinescu</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar11.jpg">
+						<img alt="" src="img/poster/avatars/avatar11.jpg">
 						<p>Bogdan Danila</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar12.jpg">
+						<img alt="" src="img/poster/avatars/avatar12.jpg">
 						<p>Mihai Eduard Daniel</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
 					<li>
-						<img src="img/poster/avatars/avatar11.jpg">
+						<img alt="" src="img/poster/avatars/avatar11.jpg">
 						<p>Benjamin Goodwin</p>
 						<a href="#" class="grey-button">Follow</a>
 					</li>
@@ -97,37 +115,52 @@
 	<section class="mobile-wrap">
 		<header>
 			<div class="head-top">
-				<span class="head-close"></span>
+				<span class="head-close">&#215;</span>
 				<p>We deliver your gift by <b>Christmas Eve</b>, if you order before the 13th of december!</p>
 				</div>
 			<div class="wrapper">
-				<h1 class="logo"><a href="#"></a></h1>
+				<h1 class="logo"><a href="#">&nbsp;</a></h1>
 				<a href="#" class="logo-txt">The keep calm-o-matic</a>
 				<div class="head-left">
-					<a href="#" class="create">Create<span></span></a>
-					<a href="#" class="discover">Discover<span></span></a>
+					<div class="mob-hidden">
+						<a href="#" class="create">Create<span></span></a>
+						<a href="#" class="discover">Discover<span></span></a>
+					</div>
+					<div class="mob-visible">
+						<div class="search-click" id="mob-search-but"></div>
+						<span class="menu-button" id="mob-menu-button"></span>
+						<ul class="menu-list">
+							<li><a href="#">Terms And Conditions</a></li>
+							<li><a href="#">Help Centre</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">The History of Keep Calm</a></li>
+						</ul>
+					</div>
 				</div>
 				<div class="head-right">
-					<span class="menu-button" id="menu-button"></span>
-					<ul id="menu-list">
-						<li><a href="#">Terms And Conditions</a></li>
-						<li><a href="#">Help Centre</a></li>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">The History of Keep Calm</a></li>
-					</ul>
+					<div class="mob-hidden menu-button" id="menu-button">
+						<ul class="menu-list">
+							<li><a href="#">Terms And Conditions</a></li>
+							<li><a href="#">Help Centre</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">The History of Keep Calm</a></li>
+						</ul>
+					</div>
 					<ul class="profile-block"><!--add class "join-in"-->
 						<li class="join-in-label">Join in</li>
-						<li class="avatar">
-							<img src="img/avatar.jpg">
+						<li class="log-in avatar" id="profile-mob"><!-- add class "mob-message" and remove class "log-in"-->
+							<a href="#" class="logged-in"></a>
+							<img alt="" src="img/avatar.jpg">
+							<span class="msg-count">2</span>
 							<p>Gabriel</p>
-							<ul>
+							<ul class="profile-list">
 								<li><a href="#">My profile</a></li>
 								<li><a href="#">My Feed</a></li>
 								<li><a href="#">Settings</a></li>
 								<li><a href="#">Log out</a></li>
 							</ul>
 						</li>
-						<li class="notif">
+						<li class="mob-hidden notif">
 							<span id="notif-button"><span class="count">2</span></span>
 							<div id="notif-list-wrap">
 								<p class="title">Notifications</p>
@@ -135,221 +168,168 @@
 									<li class="new-notif wrap-close">
 										<ul class="some-action">
 											<li class="not-read">
-												<a href="#"></a>
+												<a href="#">&#176;</a>
 											</li>
 											<li class="not-close">
-												<a href="#"></a>
+												<a href="#">&#215;</a>
 											</li>
 										</ul>
-										<img src="img/poster/notification/not-img1.jpg">
+										<img alt="" src="img/poster/notification/not-img1.jpg">
 										<p class="not-txt"><span>AidanF</span> and <span>Benjamin</span> liked  your poster</p>
 										<p class="not-date">1 sec ago</p>
 									</li>
 									<li class="wrap-close">
 										<ul class="some-action">
 											<li class="not-read">
-												<a href="#"></a>
+												<a href="#">&#176;</a>
 											</li>
 											<li class="not-close">
-												<a href="#"></a>
+												<a href="#">&#215;</a>
 											</li>
 										</ul>
-										<img src="img/poster/notification/not-img2.jpg">
+										<img alt="" src="img/poster/notification/not-img2.jpg">
 										<p class="not-txt"><span>GabrielT</span> favourited your poster</p>
 										<p class="not-date">2 weeks ago</p>
 									</li>
 									<li class="new-notif wrap-close">
 										<ul class="some-action">
 											<li class="not-read">
-												<a href="#"></a>
+												<a href="#">&#176;</a>
 											</li>
 											<li class="not-close">
-												<a href="#"></a>
+												<a href="#">&#215;</a>
 											</li>
 										</ul>
-										<img src="img/poster/notification/not-img3.jpg">
+										<img alt="" src="img/poster/notification/not-img3.jpg">
 										<p class="not-txt"><span>Someone</span> liked your poster</p>
 										<p class="not-date">12 weeks ago</p>
 									</li>
 									<li  class="wrap-close">
 										<ul class="some-action">
 											<li class="not-read">
-												<a href="#"></a>
+												<a href="#">&#176;</a>
 											</li>
 											<li class="not-close">
-												<a href="#"></a>
+												<a href="#">&#215;</a>
 											</li>
 										</ul>
-										<img src="img/poster/notification/not-img2.jpg">
+										<img alt="" src="img/poster/notification/not-img2.jpg">
 										<p class="not-txt"><span>GabrielT</span> favourited your poster</p>
 										<p class="not-date">2 weeks ago</p>
 									</li>
 									<li class="new-notif wrap-close">
 										<ul class="some-action">
 											<li class="not-read">
-												<a href="#"></a>
+												<a href="#">&#176;</a>
 											</li>
 											<li class="not-close">
-												<a href="#"></a>
+												<a href="#">&#215;</a>
 											</li>
 										</ul>
-										<img src="img/poster/notification/not-img3.jpg">
+										<img alt="" src="img/poster/notification/not-img3.jpg">
 										<p class="not-txt"><span>Someone</span> liked your poster</p>
 										<p class="not-date">12 weeks ago</p>
 									</li>
 									<li class="wrap-close">
 										<ul class="some-action">
 											<li class="not-read">
-												<a href="#"></a>
+												<a href="#">&#176;</a>
 											</li>
 											<li class="not-close">
-												<a href="#"></a>
+												<a href="#">&#215;</a>
 											</li>
 										</ul>
-										<img src="img/poster/notification/not-img2.jpg">
+										<img alt="" src="img/poster/notification/not-img2.jpg">
 										<p class="not-txt"><span>GabrielT</span> favourited your poster</p>
 										<p class="not-date">2 weeks ago</p>
 									</li>
 									<li class="new-notif wrap-close">
 										<ul class="some-action">
 											<li class="not-read">
-												<a href="#"></a>
+												<a href="#">&#176;</a>
 											</li>
 											<li class="not-close">
-												<a href="#"></a>
+												<a href="#">&#215;</a>
 											</li>
 										</ul>
-										<img src="img/poster/notification/not-img3.jpg">
+										<img alt="" src="img/poster/notification/not-img3.jpg">
 										<p class="not-txt"><span>Someone</span> liked your poster</p>
 										<p class="not-date">12 weeks ago</p>
 									</li>
 									<li class="wrap-close">
 										<ul class="some-action">
 											<li class="not-read">
-												<a href="#"></a>
+												<a href="#">&#176;</a>
 											</li>
 											<li class="not-close">
-												<a href="#"></a>
+												<a href="#">&#215;</a>
 											</li>
 										</ul>
-										<img src="img/poster/notification/not-img1.jpg">
+										<img alt="" src="img/poster/notification/not-img1.jpg">
 										<p class="not-txt"><span>AidanF</span>, <span>Benjamin</span> and <span>LiviaS</span> liked your poster</p>
 										<p class="not-date">a long time ago</p>
 									</li>
 									<li class="new-notif wrap-close">
 										<ul class="some-action">
 											<li class="not-read">
-												<a href="#"></a>
+												<a href="#">&#176;</a>
 											</li>
 											<li class="not-close">
-												<a href="#"></a>
+												<a href="#">&#215;</a>
 											</li>
 										</ul>
-										<img src="img/poster/notification/not-img1.jpg">
+										<img alt="" src="img/poster/notification/not-img1.jpg">
 										<p class="not-txt"><span>AidanF</span>, <span>Benjamin</span> and <span>LiviaS</span> liked your poster</p>
 										<p class="not-date">a long time ago</p>
 									</li>
 									<li>
-										<img src="img/poster/notification/not-img4.jpg">
+										<img alt="" src="img/poster/notification/not-img4.jpg">
 										<p class="not-txt"><span>Benjamin</span> is now following you</p>
 										<p class="not-date">a long time ago</p>
 									</li>
 								</ul>
 							</div>
 						</li>
-						<li class="trash"><a href="#"></a></li>
+						<li class="trash"><a href="#"><span class="trash-count">5</span></a></li>
 					</ul>
-					<div class="search-wrap">
+					<div class="mob-hidden search-click" id="tab-search-but"></div>
+					<div class="mob-hidden search-wrap">
 						<div class="search-form" id="poster-sf"><!--add class "focused"-->
 							<input type="text" id="search-poster" placeholder="Search here">
 							<a href="#" class="search-button"></a>
-							<span class="input-close"></span>
+							<span class="input-close">&#215;</span>
 						</div>
 						<div class="top-hit" id="top-hit">
 							<p class="title">Top hits</p>
 							<ul class="hit-img">
-								<li><img src="img/poster/top-hits/hit-img1.jpg"></li>
-								<li><img src="img/poster/top-hits/hit-img2.jpg"></li>
-								<li><img src="img/poster/top-hits/hit-img3.jpg"></li>
-								<li><img src="img/poster/top-hits/hit-img4.jpg"></li>
-								<li><img src="img/poster/top-hits/hit-img5.jpg"></li>
-								<li><img src="img/poster/top-hits/hit-img6.jpg"></li>
-								<li><img src="img/poster/top-hits/hit-img7.jpg"></li>
-								<li><img src="img/poster/top-hits/hit-img8.jpg"></li>
-								<li><img src="img/poster/top-hits/hit-img9.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img1.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img2.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img3.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img4.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img5.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img6.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img7.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img8.jpg"></li>
+								<li><img alt="" src="img/poster/top-hits/hit-img9.jpg"></li>
 							</ul>
 							<a href="#" class="view-all">View all results</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="mob-visible">
-				<h1 class="logo"><a href="#"></a></h1>
-				<div class="mob-head-left">
-					<a href="#" class="menu-button"></a>
-					<a class="search-button-down"></a>
-					<div class="search-form">
-						<input type="text" placeholder="Search here">
-						<a href="#" class="search-button"></a>
-					</div>
-				</div>
-				<a href="#" class="mob-create">Create</a>
+			<div class="mob-search-form">
+				<input type="text" id="mob-search" placeholder="Search here">
+				<span class="input-close">&#215;</span>
+			</div>
+			<div class="mob-visible cr-disk-wrap">
+				<a href="#" class="create">Create<span></span></a>
+				<a href="#" class="discover">Discover<span></span></a>
 			</div>
 		</header>
-		<div class="head-ban">
+		<div class="wrapper head-ban">
 			<span class="poster-close"></span>
 		</div>
 		<section class="poster-main-wrap">
-			<div class="sidebar">
-				<div class="side-product">
-					<p class="title"><span>Get this poster</span><br>on dozens of<br>fantastic products</p>
-					<ul class="product-layer">
-						<li><a href="#"><span><img src="img/poster/prod-img8.jpg"></span><p>Printed<br>Poster</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img1.jpg"></span><p>Custom<br>Mug</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img2.jpg"></span><p>Mens'<br>T-Shirt</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img3.jpg"></span><p>Ladies'<br>T-Shirt</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img2.jpg"></span><p>Childrens'<br>T-Shirt</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img4.jpg"></span><p>Hoody</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img5.jpg"></span><p>Mouse<br>Mat</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img8.jpg"></span><p>Wall<br>Decal</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img6.jpg"></span><p>Keychain</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img7.jpg"></span><p>4 Coasters</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img8.jpg"></span><p>Printed<br>Poster</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img1.jpg"></span><p>Custom<br>Mug</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img2.jpg"></span><p>Mens'<br>T-Shirt</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img3.jpg"></span><p>Ladies'<br>T-Shirt</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img2.jpg"></span><p>Childrens'<br>T-Shirt</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img4.jpg"></span><p>Hoody</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img5.jpg"></span><p>Mouse<br>Mat</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img8.jpg"></span><p>Wall<br>Decal</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img6.jpg"></span><p>Keychain</p></a></li>
-						<li><a href="#"><span><img src="img/poster/prod-img7.jpg"></span><p>4 Coasters</p></a></li>
-					</ul>
-					<a class="green-button" id="more-product" href="#">See more products</a>
-				</div>
-				<div class="side-poster">
-					<div class="member-info">
-						<a href="#" class="avatar"><img src="img/poster/avatars/avatar1.jpg"></a>
-						<a href="#" class="memb-name">Christine Walkerson</a>
-						<p>Memeber since <span>May 23,2012</span></p>
-						<a class="grey-button" href="#">Follow</a><!--add the class 'follow'-->
-					</div>
-					<div class="top-poster">
-						<p class="title">Top poster</p>
-						<ul class="poster-image">
-							<li><a href="#"><img src="img/poster/poster-img1.jpg"></a></li>
-							<li><a href="#"><img src="img/poster/poster-img2.jpg"></a></li>
-							<li><a href="#"><img src="img/poster/poster-img3.jpg"></a></li>
-							<li><a href="#"><img src="img/poster/poster-img4.jpg"></a></li>
-							<li><a href="#"><img src="img/poster/poster-img5.jpg"></a></li>
-							<li><a href="#"><img src="img/poster/poster-img6.jpg"></a></li>
-						</ul>
-					</div>
-					<div class="view-poster">
-						<a href="#">View 204 more posters...</a>
-					</div>
-				</div>
-			</div>
 			<div class="content">
 				<div class="content-title">
 					<a class="yellow-like" href="#"></a>
@@ -361,7 +341,7 @@
 						<div class="but-block">
 							<a href="#" class="create-btn">Create your own</a>
 							<div class="share-copy-wrap">
-								<span class="share-conn" id="share-conn" href="#"></span>
+								<span class="share-conn" id="share-conn"></span>
 								<div id="share-on-block">
 									<p>Share on</p>
 									<ul>
@@ -371,7 +351,7 @@
 										<li><a class="gp" href="#"></a></li>
 									</ul>
 								</div>
-								<span class="more-copy" id="more-copy" href="#"></span>
+								<span class="more-copy" id="more-copy"></span>
 								<ul id="more-copy-block">
 									<li><a href="#"><span class="dl"></span>Download</a></li>
 									<li><a href="#"><span class="ec"></span>Embed code</a></li>
@@ -380,66 +360,73 @@
 								</ul>
 							</div>
 						</div>
+					</div>
+					<div class="comment-block">
 						<div class="center-poster">
+							<a class="yellow-like" href="#"></a>
+							<a class="red-star" href="#"></a>
 							<div class="poster-action">
 								<ul>
-									<li><a class="lk" href="#"></a></li>
-									<li><a class="st" href="#"></a></li>
+									<li><a class="lk" href="#"></a></li><!-- add class "pa-active" -->
+									<li><a class="st" href="#"></a></li><!-- add class "pa-active" -->
 									<li><a class="bs" href="#"></a></li>
 								</ul>
 							</div>
-							<img src="img/poster/keep-calm-image28.jpg">
+							<img alt="" src="img/poster/keep-calm-image28.jpg">
 						</div>
 						<div class="member-about">
-							<a href="#" class="content-avatar"><img src="img/poster/avatars/avatar1.jpg"></a>
+							<a href="#" class="content-avatar"><img alt="" src="img/poster/avatars/avatar1.jpg"></a>
 							<p class="memb-inf">by <a href="#" class="memb-name">Christine Walkerson</a><br><span>1 year, 11 months ago</span></p>
 							<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, ncididunt ut labore et</p>
 						</div>
-					</div>
-					<div class="comment-block">
+						<div class="mob-visible mob-buttons">
+							<button class="mob-like">Like <span></span></button>
+							<button class="mob-favorite">Favorite <span></span></button>
+						</div>
 						<ul class="icon-layer">
 							<li><a class="like-icon" id="open-popup" href="#">2371</a></li>
 							<li><a class="star-icon" href="#">109</a></li>
 							<li><a class="comment-icon" href="#">3</a></li>
 						</ul>
-						<ul class="comment-txt">
+						<p class="mobile-comment">Comments <span class="com-count">(3)</span></p>
+						<ul class="comment-txt mobile-comment-wrap">
 							<li>
 								<a href="#" class="img-wrap">
-									<img src="img/poster/avatars/avatar2.jpg">
+									<img alt="" src="img/poster/avatars/avatar2.jpg">
 								</a>
 								<div class="txt-wrap">
-									<span href="#" class="report-comment"></span>
+									<span class="report-comment"></span>
 									<p><a href="#" class="com-name">The_girl_2014</a>  Awesome poster! I’ll print it and place it on my wall, that way I can see it every morning before I go to work!</p>
 									<p class="com-date">May 12, 2012</p>
 								</div>
 							</li>
 							<li>
 								<a href="#" class="img-wrap">
-									<img src="img/poster/avatars/avatar3.jpg">
+									<img alt="" src="img/poster/avatars/avatar3.jpg">
 								</a>
 								<div class="txt-wrap">
-									<span href="#" class="report-comment"></span>
+									<span class="report-comment"></span>
 									<p><a href="#" class="com-name">Karen Popescu</a>  Yeah, me too, this ROCKS!</p>
 									<p class="com-date">May 12, 2012</p>
 								</div>
 							</li>
 							<li>
 								<a href="#" class="img-wrap">
-									<img src="img/poster/avatars/avatar4.jpg">
+									<img alt="" src="img/poster/avatars/avatar4.jpg">
 								</a>
 								<div class="txt-wrap">
-									<span href="#" class="report-comment"></span>
+									<span class="report-comment"></span>
 									<p><a href="#" class="com-name">Andrea Will</a> This is really stupid, you are all stupid! Look at my tattoo, that’s not stupid at all! Everyone likes it, but I can’t see it, because the fucking thing is on my fucking back :(</p>
 									<p class="com-date">May 12, 2012</p>
 								</div>
 							</li>
 							<li class="add-comment-layer">
 								<a href="#" class="img-wrap">
-									<img src="img/poster/avatars/avatar5.jpg">
+									<img alt="" src="img/poster/avatars/avatar5.jpg">
 								</a>
 								<div class="txt-wrap">
 									<p><a href="#" class="com-name">Gabriel Taudor</a> (me)</p>
-									<textarea name="add-comment" class="add-comment" id="" placeholder="Add your comment"></textarea>
+									<textarea name="add-comment" class="add-comment" placeholder="Add your comment"></textarea>
 									<a href="#" class="grey-button">Comment</a>
 								</div>
 							</li>
@@ -447,54 +434,117 @@
 					</div>
 				</div>
 			</div>
+			<div class="sidebar">
+				<div class="side-product">
+					<p class="title"><span>Get this poster</span><br>on dozens of<br>fantastic products</p>
+					<ul class="product-layer">
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img8.jpg"></span><p>Printed<br>Poster</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img1.jpg"></span><p>Custom<br>Mug</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img2.jpg"></span><p>Mens'<br>T-Shirt</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img3.jpg"></span><p>Ladies'<br>T-Shirt</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img2.jpg"></span><p>Childrens'<br>T-Shirt</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img4.jpg"></span><p>Hoody</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img5.jpg"></span><p>Mouse<br>Mat</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img8.jpg"></span><p>Wall<br>Decal</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img6.jpg"></span><p>Keychain</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img7.jpg"></span><p>4 Coasters</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img8.jpg"></span><p>Printed<br>Poster</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img1.jpg"></span><p>Custom<br>Mug</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img2.jpg"></span><p>Mens'<br>T-Shirt</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img3.jpg"></span><p>Ladies'<br>T-Shirt</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img2.jpg"></span><p>Childrens'<br>T-Shirt</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img4.jpg"></span><p>Hoody</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img5.jpg"></span><p>Mouse<br>Mat</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img8.jpg"></span><p>Wall<br>Decal</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img6.jpg"></span><p>Keychain</p></a></li>
+						<li><a href="#"><span><img alt="" src="img/poster/prod-img7.jpg"></span><p>4 Coasters</p></a></li>
+					</ul>
+					<a class="green-button" id="more-product" href="#">See more products</a>
+				</div>
+				<div class="side-poster">
+					<div class="member-info">
+						<a href="#" class="avatar"><img alt="" src="img/poster/avatars/avatar1.jpg"></a>
+						<a href="#" class="memb-name">Christine Walkerson</a>
+						<p>Memeber since <span>May 23,2012</span></p>
+						<a class="grey-button" href="#">Follow</a><!--add the class 'follow'-->
+					</div>
+					<div class="top-poster">
+						<p class="title">Top poster</p>
+						<ul class="poster-image">
+							<li><a href="#"><img alt="" src="img/poster/poster-img1.jpg"></a></li>
+							<li><a href="#"><img alt="" src="img/poster/poster-img2.jpg"></a></li>
+							<li><a href="#"><img alt="" src="img/poster/poster-img3.jpg"></a></li>
+							<li><a href="#"><img alt="" src="img/poster/poster-img4.jpg"></a></li>
+							<li><a href="#"><img alt="" src="img/poster/poster-img5.jpg"></a></li>
+							<li><a href="#"><img alt="" src="img/poster/poster-img6.jpg"></a></li>
+						</ul>
+					</div>
+					<div class="view-poster">
+						<a href="#">View 204 more posters...</a>
+					</div>
+				</div>
+			</div>
 		</section>
 	</section>
 	<footer>
 		<div class="wrapper">
-			<p class="ttl">As seen on</p>
 			<ul class="label-list">
-				<li><a href="#"><img src="img/poster/labels/lab-img1.png"></a></li>
-				<li><a href="#"><img src="img/poster/labels/lab-img2.png"></a></li>
-				<li><a href="#"><img src="img/poster/labels/lab-img3.png"></a></li>
-				<li><a href="#"><img src="img/poster/labels/lab-img4.png"></a></li>
+				<li><a class="label-img1" href="#"></a></li>
+				<li><a class="label-img2" href="#"></a></li>
+				<li><a class="label-img3" href="#"></a></li>
+				<li><a class="label-img4" href="#"></a></li>
 			</ul>
-			<div class="bottom-info-layer">
-				<p class="title">About</p>
-				<nav>
-					<ul class="foot-nav">
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Terms, conditions & Privacy</a></li>
-						<li><a href="#">The History of Keep caim</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="bottom-info-layer ">
-				<p class="title">Shop</p>
-				<nav>
-					<ul class="foot-nav">
-						<li><a href="#">Help Centre</a></li>
-						<li><a href="#">View our Products</a></li>
-						<li><a href="#">My account</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="bottom-info-layer">
-				<p class="title">Connect and socialise</p>
-				<p>Keep calm and get social! Follow us on Twitter, join our Facebook page or subscribe to the RSS feed!</p>
-				<ul class="foot-soc">
-					<li><a class="fb" href="#"></a></li>
-					<li><a class="tw" href="#"></a></li>
-					<li><a class="pb" href="#"></a></li>
-					<li><a class="gp" href="#"></a></li>
-				</ul>
-			</div>
-			<div class="bottom-info-layer">
-				<p class="title">Latest Tweets</p>
-				<div class="tweet-one">
-					<span class="twt"></span>
-					<p class="tweet-mail">@keepcalmomatic<span class="tweet-date">Sep 02</span></p>
-					<p>Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor <a href="#">fb.me/2bjB9Ehh0</a></p>
+			<div class="info-layer-wrap">
+				<div class="bot-inf-mob"></div>
+				<div class="bottom-info-layer">
+					<p class="title">About</p>
+					<div class="accord-for-mobile">
+						<nav>
+							<ul class="foot-nav">
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Terms, conditions & Privacy</a></li>
+								<li><a href="#">The History of Keep caim</a></li>
+							</ul>
+						</nav>
+					</div>
 				</div>
+				<div class="bottom-info-layer">
+					<p class="title">Shop</p>
+					<div class="accord-for-mobile">
+						<nav>
+							<ul class="foot-nav">
+								<li><a href="#">Help Centre</a></li>
+								<li><a href="#">View our Products</a></li>
+								<li><a href="#">My account</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="bottom-info-layer">
+					<p class="title">Connect and socialise</p>
+					<div class="accord-for-mobile">
+						<p>Keep calm and get social! Follow us on Twitter, join our Facebook page or subscribe to the RSS feed!</p>
+						<ul class="foot-soc">
+							<li><a class="fb" href="#"></a></li>
+							<li><a class="tw" href="#"></a></li>
+							<li><a class="pb" href="#"></a></li>
+							<li><a class="gp" href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bottom-info-layer">
+					<p class="title">Latest Tweets</p>
+					<div class="accord-for-mobile">
+						<div class="tweet-one">
+							<span class="twt"></span>
+							<p class="tweet-mail">@keepcalmomatic<span class="tweet-date">Sep 02</span></p>
+							<p>Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor <a href="#">fb.me/2bjB9Ehh0</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tool-img-wrap">
+				<span class="tool-wrap"></span>
 			</div>
 		</div>
 		<div class="wrapper foot-bot-layer">
@@ -504,17 +554,11 @@
 				<li>Terms, conditions & privacy</li>
 			</ul>
 			<ul class="foot-image">
-				<li><img src="img/poster/mach-tool.png"></li>
-				<li class="lab-img"><img src="img/poster/labels/lab-img5.png"></li>
-				<li class="lab-img"><img src="img/poster/labels/lab-img6.png"></li>
+				<li class="tool-wrap"></li>
+				<li class="foot-lab-img1"></li>
+				<li class="foot-lab-img2"></li>
 			</ul>
 		</div>
-		<ul class="mobile">
-			<li><a class="discover" href="#"><i></i>Discover</a></li>
-			<li><a class="not" href="#"><i><span>2</span></i>Notifications</a></li>
-			<li><a class="basket" href="#"><i></i>Basket</a></li>
-			<li><a class="profile" href="#"><i></i>Profile</a></li>
-		</ul>
 	</footer>
 
 	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
