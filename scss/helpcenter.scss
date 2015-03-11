@@ -490,7 +490,7 @@ body{
 						width: 124px;
 						height: 145px;
 						@include box-shadow(10px 10px 6px rgba(0,0,0,.1));
-						@media only screen and (max-width: 600px) {display: none;}
+						@media only screen and (max-width: 600px) {display: none !important}
 						&.ban-image04{background: url(../img/media/image04.png) top center no-repeat;}
 						&.ban-image09{background: url(../img/media/image09.png) top center no-repeat;}
 						&.ban-image12{background: url(../img/media/image12.png) top center no-repeat;}

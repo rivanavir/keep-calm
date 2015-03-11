@@ -2432,7 +2432,7 @@ body {
 @media only screen and (max-width: 600px) {
   /* line 479, ../scss/helpcenter.scss */
   .content .tabs .tab-content .section.current .keep-calm-ban {
-    display: none;
+    display: none !important;
   }
 }
 /* line 494, ../scss/helpcenter.scss */
